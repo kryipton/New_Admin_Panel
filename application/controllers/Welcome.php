@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends MY_Controller{
     public function index()
     {
-        $this->load->view('welcome_message');
+        $this->load->view('admin/dashboard');
     }
 
     public function cavid()
@@ -16,8 +16,7 @@ class Welcome extends MY_Controller{
         );
         $table_name = "car";
         $upload_path = base_url("uploads/img/");
-        $update_link = base_url("update_link");
-        $this->data_table($field_names, $table_name, $upload_path, $update_link);
+        $this->data_table($field_names, $table_name, $upload_path);
 
 
 //        print_r("<pre>");

@@ -1,0 +1,98 @@
+.c_module{
+    padding: 20px;
+}
+
+.previous i{
+    font-size: 20px;
+    margin-right: 6px;
+    color: rgb(152, 152, 152) !important;
+
+}
+
+.next i{
+    font-size: 20px;
+    margin-left: 6px;
+    color: rgb(152, 152, 152) !important;
+}
+
+.current{
+    font-size: 18px;
+    color: rgb(152, 0, 2) !important;
+
+}
+
+.paginate_button {
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+}
+
+table tbody tr{
+    height: 73px!important;
+}
+
+table tbody tr td{
+    text-align: center!important;
+    vertical-align: middle!important;
+    /*max-width: 120px!important;*/
+
+}
+
+.dialog {
+    padding: 30px;
+    position: fixed;
+    left: calc(50vw - (560px/2));
+    max-width: 500px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 1.0e-08);
+    color: #eee;
+    border-radius: 100%;
+    transform: scale(0);
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+}
+.dialog.open {
+    background: #3679b3;
+    border-radius: 5%;
+    transform: scale(1);
+}
+.dialog header {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px 0;
+}
+.dialog p {
+    font-size: 1rem;
+}
+
+.btn-open {
+    padding: 30px 10px;
+    display: inline-block;
+    max-width: 200px;
+    max-height: 45px;
+    width: 100%;
+    color: #eee;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-radius: 7px;
+    position: absolute;
+    top: calc(50% - (45px/2));
+    left: calc(50% - 110px);
+    z-index: 100;
+}
+.btn-close {
+    position: relative;
+    top: -15px;
+    left: calc(100% - 15px);
+}
+.btn-close:after {
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: white;
+    content: '\2715';
+    line-height: 1.2;
+}

@@ -465,7 +465,7 @@ class MY_Controller extends CI_Controller{
 
 //======================================== Dinamik Data table kodlari ===================================================
 
-    public function data_table($valid_columns, $table_name, $upload_path, $update_link)
+    public function data_table($valid_columns, $table_name, $upload_path)
     {
         $draw = intval($this->input->post("draw"));
         $start = intval($this->input->post("start"));
@@ -561,14 +561,14 @@ class MY_Controller extends CI_Controller{
                 if (substr($v, -4) == ".jpg" || substr($v, -4) == ".png" || substr($v, -4) == ".jpeg"){
                     $item[$k] = '<img width="100px" height ="100px" style="object-fit:contain" src="' . $upload_path . $v .'" alt="Sekil">';
                 }else{
-                    $item[$k] = '<span class="c_update_link" data-url = "' . $update_link . '">' . $v . '</span>';
+                    $item[$k] = '<span class="c_update_link" data-url = "'  . '">' . $v . '</span>';
                 }
             }
 
             $data[] = $item;
         }
         foreach ($data as $element => $val) {
-            $val[] = '<a href="#" class="btn btn-warning mr-1">Edit</a> <a href="#" class="btn btn-danger mr-1">Delete</a>';
+            $val[] = '<a class="btn btn-warning mr-1" onclick="document.querySelector(\'.dialog\').classList.add(\'open\')" >Edit</a> <a class="btn btn-danger mr-1">Delete</a>';
 
             $data[$element] = $val;
         }
