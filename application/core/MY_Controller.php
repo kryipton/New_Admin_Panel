@@ -465,7 +465,7 @@ class MY_Controller extends CI_Controller{
 
 //======================================== Dinamik Data table kodlari ===================================================
 
-    public function data_table($valid_columns, $table_name, $upload_path, $update_link)
+    public function data_table($valid_columns, $table_name, $upload_path)
     {
         $draw = intval($this->input->post("draw"));
         $start = intval($this->input->post("start"));
@@ -561,14 +561,14 @@ class MY_Controller extends CI_Controller{
                 if (substr($v, -4) == ".jpg" || substr($v, -4) == ".png" || substr($v, -4) == ".jpeg"){
                     $item[$k] = '<img width="100px" height ="100px" style="object-fit:contain" src="' . $upload_path . $v .'" alt="Sekil">';
                 }else{
-                    $item[$k] = '<span class="c_update_link" data-url = "' . $update_link . '">' . $v . '</span>';
+                    $item[$k] = '<span class="c_update_link" data-url = "'  . '">' . $v . '</span>';
                 }
             }
 
             $data[] = $item;
         }
         foreach ($data as $element => $val) {
-            $val[] = '<a href="#" class="btn btn-warning mr-1">Edit</a> <a href="#" class="btn btn-danger mr-1">Delete</a>';
+            $val[] = '<a class="btn btn-warning mr-1" onclick="document.querySelector(\'.dialog\').classList.add(\'open\')" >Edit</a> <a class="btn btn-danger mr-1">Delete</a>';
 
             $data[$element] = $val;
         }
@@ -598,6 +598,56 @@ class MY_Controller extends CI_Controller{
 
 //======================================== Dinamik Data table kodlari ===================================================
 
+
+//======================================== Dinamik update view yazdirmaq ===================================================
+
+    public function update_view($label_name_and_input_name, $input_name_type, $action_link)
+    {
+
+        $first_part = '<div class="dialog">
+                            <span style="color: #ffffff!important;" class="btn-close"  onclick="document.querySelector(\'.dialog\').classList.remove(\'open\')"></span>
+                            <header>Yeniləmə</header>
+                            <form action="'. $action_link .'" method="post" enctype="multipart/form-data">';
+
+        $second_part="";
+
+        foreach ($label_name_and_input_name as $key=>$value) {
+            $second_part .= '<label for="' . $value . '" style="color: white!important;">' . $key .
+                '</label><input required id="' . $value . '" name="'. $value . '" class="form-control" type="' . $input_name_type[$value]. '"><br>';
+        }
+
+        $third_part = '<br><button type="submit" class="btn btn-primary">Yenilə</button></form></div>';
+
+        return $first_part . $second_part . $third_part;
+
+    }
+
+    public function create_view($label_name_and_input_name, $input_name_type, $action_link)
+    {
+
+        $first_part = '<div class="dialog2">
+                            <span style="color: #ffffff!important;" class="btn-close"  onclick="document.querySelector(\'.dialog2\').classList.remove(\'open\')"></span>
+                            <header>Yeni</header>
+                            <form action="'. $action_link .'" method="post" enctype="multipart/form-data">';
+        $second_part="";
+        $required="";
+        foreach ($label_name_and_input_name as $key=>$value) {
+            if ($value!="file"){
+                $required="required";
+            }else{
+                $required="";
+            }
+            $second_part .= '<label for="' . $value . '" style="color: white!important;">' . $key .
+                '</label><input ' . $required . ' id="' . $value . '" name="'. $value . '" class="form-control" type="' . $input_name_type[$value]. '"><br>';
+        }
+
+        $third_part = '<br><button type="submit" class="btn btn-primary">Yenilə</button></form></div>';
+
+        return $first_part . $second_part . $third_part;
+
+    }
+
+//======================================== Dinamik update view yazdirmaq ===================================================
 
 
 

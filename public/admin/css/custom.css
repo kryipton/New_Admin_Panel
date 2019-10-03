@@ -1,0 +1,140 @@
+.c_module{
+    padding: 20px;
+}
+
+.previous i{
+    font-size: 20px;
+    margin-right: 6px;
+    color: rgb(152, 152, 152) !important;
+
+}
+
+.next i{
+    font-size: 20px;
+    margin-left: 6px;
+    color: rgb(152, 152, 152) !important;
+}
+
+.current{
+    font-size: 18px;
+    color: red !important;
+
+}
+
+.paginate_button {
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+}
+
+table tbody tr{
+    height: 73px!important;
+}
+
+table tbody tr td{
+    text-align: center!important;
+    vertical-align: middle!important;
+    /*max-width: 120px!important;*/
+
+}
+
+.dialog {
+    padding: 30px;
+    position: fixed;
+    left: calc(50vw - (560px/2));
+    width: 500px!important;
+    max-height: 500px;
+    /*width: 100%;*/
+    height: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 1.0e-08);
+    color: #eee;
+    transform: scale(0);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: all .4s ease-in-out;
+    text-align: center;
+}
+
+.dialog2 {
+    padding: 30px;
+    position: fixed;
+    left: calc(50vw - (560px/2));
+    width: 500px!important;
+    max-height: 500px;
+    /*width: 100%;*/
+    height: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 1.0e-08);
+    color: #eee;
+    transform: scale(0);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: all .4s ease-in-out;
+    text-align: center;
+}
+
+.dialog.open {
+    background: lightgray;
+    transform: scale(1.1);
+    top: 100px;
+}
+.dialog header {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px 0;
+}
+.dialog p {
+    font-size: 1rem;
+}
+
+.dialog2.open {
+    background: lightgray;
+    transform: scale(1.1);
+    top: 100px;
+}
+.dialog2 header {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px 0;
+}
+.dialog2 p {
+    font-size: 1rem;
+}
+
+.btn-open {
+    padding: 30px 10px;
+    display: inline-block;
+    max-width: 500px;
+    max-height: 45px;
+    width: 100%;
+    color: #eee;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-radius: 7px;
+    position: absolute;
+    top: calc(50% - (45px/2));
+    left: calc(50% - 110px);
+    z-index: 100;
+}
+.btn-close {
+    position: relative;
+    top: -15px;
+    left: 235px;
+}
+.btn-close:after {
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: white;
+    content: '\2715';
+    line-height: 1.2;
+}
+
+
+.c_head th{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
