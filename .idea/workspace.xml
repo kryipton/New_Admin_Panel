@@ -4,6 +4,7 @@
     <list default="true" id="c58a6fd7-cbc1-4644-9ff0-a464c394406c" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../Rasim_teacher_task/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Utech/application/views/backend/portfolio/portfolio_category/portfolio_category_operations/portfolio_category_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,19 +12,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/Admin_Front/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="236">
               <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
-              <folding>
-                <element signature="e#2363#2691#0#HTML" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -31,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+            <state relative-caret-position="170">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
               <folding>
                 <element signature="n#index#0;n#Welcome#0;n#!!top" />
                 <element signature="e#251#358#0#PHP" />
@@ -41,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="381">
@@ -57,7 +55,6 @@
                 <element signature="n#update_db_ajax_img#0;n#MY_Controller#0;n#!!top" />
                 <element signature="n#insert_db_ajax_img#0;n#MY_Controller#0;n#!!top" />
                 <element signature="n#data_table#0;n#MY_Controller#0;n#!!top" />
-                <element signature="e#18338#18386#0#PHP" />
                 <element signature="n#data_table_2#0;n#MY_Controller#0;n#!!top" />
               </folding>
             </state>
@@ -155,6 +152,7 @@
       <updated>1570014768575</updated>
       <workItem from="1570014770224" duration="16522000" />
       <workItem from="1570039450606" duration="2669000" />
+      <workItem from="1570111263759" duration="182000" />
     </task>
     <servers />
   </component>
@@ -163,8 +161,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12313433" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.124200426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -237,27 +236,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
-          <folding>
-            <element signature="e#2363#2691#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding>
-            <element signature="n#index#0;n#Welcome#0;n#!!top" />
-            <element signature="e#251#358#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
@@ -273,9 +251,26 @@
             <element signature="n#update_db_ajax_img#0;n#MY_Controller#0;n#!!top" />
             <element signature="n#insert_db_ajax_img#0;n#MY_Controller#0;n#!!top" />
             <element signature="n#data_table#0;n#MY_Controller#0;n#!!top" />
-            <element signature="e#18338#18386#0#PHP" />
             <element signature="n#data_table_2#0;n#MY_Controller#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding>
+            <element signature="n#index#0;n#Welcome#0;n#!!top" />
+            <element signature="e#251#358#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
         </state>
       </provider>
     </entry>
