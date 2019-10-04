@@ -28,7 +28,7 @@
         $this->db->where($where)->update($table_name ,$data);
     }
 
-    public function delete_class($where, $table_name)
+    public function core_delete($where, $table_name)
     {
         return $this->db->where($where)->delete($table_name);
     }

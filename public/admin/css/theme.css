@@ -1344,15 +1344,17 @@ border-top-left-radius: 3px;
 	margin: 0
 }
 .dataTables_wrapper select, .dataTables_wrapper input {
-	margin: 0 0 0 5px
+	/*margin: 0 0 0 5px*/
 }
 .dataTables_wrapper>div {
 	float: left;
-	margin: 0 0 15px 15px
+	/*margin: 0 0 15px 15px*/
 }
 .dataTables_wrapper>div+div {
 	float: right;
-	margin: 0 15px 15px 0
+	/*margin: 0 15px 15px 0*/
+	margin-bottom: 15px;
+	margin-top: 5px;
 }
 .dataTables_wrapper table+div, .dataTables_wrapper table+div+div {
 	margin-top: 15px;

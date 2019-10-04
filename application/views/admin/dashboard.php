@@ -5,13 +5,13 @@
 
 <?php $this->load->view("admin/includes/navbar")?>
 
+<!--    yenileme ve insert ucun modal -->
+<?php echo $create_modal?>
+<!--    yenileme ve insert ucun modal -->
+
+
 <div class="content">
     <div class="module c_module">
-
-<!--    update ucun modal -->
-        <?php echo $create_modal?>
-        <?php echo $update_modal?>
-<!--    update ucun modal -->
 
 
 <!--        modulun basliqi-->
@@ -21,7 +21,8 @@
 <!--        modulun basliqi-->
 
         <br>
-        <button class="btn btn-info" style="float: right;margin-right: 14px" onclick="document.querySelector('.dialog2').classList.add('open')">Yeni Əlavə Et</button>
+        <button class="btn btn-info" style="float: right;" onclick="document.querySelector('.dialog2').classList.add('open')">Yeni Əlavə Et</button>
+
         <br>
 
 
@@ -42,25 +43,33 @@
                         <th>brand</th>
                         <th>date</th>
                         <th>img</th>
+                        <th>Galereya</th>
+                        <th>Qiymetler</th>
+                        <th>Qiymetler2</th>
                         <th data-orderable="false">Əməliyatlar</th>
                     </tr>
                 </thead>
 
                 <tbody></tbody>
 
-                <thead>
-                <tr class="c_head">
-                    <th>id</th>
-                    <th>name</th>
-                    <th>brand</th>
-                    <th>date</th>
-                    <th>img</th>
-                    <th>Əməliyatlar</th>
-                </tr>
-                </thead>
+                <tfoot>
+                    <tr class="c_head">
+                        <th>id</th>
+                        <th>name</th>
+                        <th>brand</th>
+                        <th>date</th>
+                        <th>img</th>
+                        <th>Galereya</th>
+                        <th>Qiymetler</th>
+                        <th>Qiymetler2</th>
+                        <th>Əməliyatlar</th>
+                    </tr>
+                </tfoot>
             </table>
         </div>
 <!--        modulun contenti-->
+
+
 
     </div>
 </div>
