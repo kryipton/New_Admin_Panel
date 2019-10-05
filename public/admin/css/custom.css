@@ -178,3 +178,43 @@ table tbody tr td{
 #datatable_length label select{
     width: 60px!important;
 }
+
+.c_delete_all{
+    padding: 2px 5px!important;
+}
+
+.c_check_all{
+    margin-right: 4px!important;
+}
+
+.row_color{
+    background-color: #FFFF66;
+}
+
+
+.c_head th:nth-child(1){
+    width: 10px!important;
+    padding-left: 4px!important;
+    padding-right: 4px!important;
+}
+
+
+
+tbody tr td:nth-child(1){
+    width: 10px!important;
+    padding-left: 4px!important;
+    padding-right: 4px!important;
+}
+
+.c_head th:first-child{
+    width: 5px!important;
+}
+
+tbody tr td:first-child{
+    width: 5px!important;
+}
+
+.c_switch{
+    padding-left: 0!important;
+    padding-right: 0!important;
+}

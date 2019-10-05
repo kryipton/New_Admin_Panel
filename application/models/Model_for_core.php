@@ -3,9 +3,9 @@
 
 //==============================================Core ucun lazim olan functionlar========================================
 
-    public function core_get($order_by, $table_name)
+    public function core_get($table_name)
     {
-        return $this->db->order_by($order_by)->get($table_name)->result_array();
+        return $this->db->get($table_name)->result_array();
     }
 
     public function core_get_where_row($where, $table_name)
@@ -13,9 +13,9 @@
         return $this->db->where($where)->get($table_name)->row_array();
     }
 
-    public function core_get_where_result($where, $order_by, $table_name)
+    public function core_get_where_result($where, $table_name)
     {
-        return $this->db->where($where)->order_by($order_by)->get($table_name)->result_array();
+        return $this->db->where($where)->get($table_name)->result_array();
     }
 
     public function core_add($data, $table_name)
