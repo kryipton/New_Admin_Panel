@@ -13,21 +13,20 @@ $(document).ready(function(e){
         },
         "language": {
             "paginate": {
-                "previous": '<i class="fas fa-arrow-circle-left"></i>',
-                "next": '<i class="fas fa-arrow-circle-right"></i>'
+                "previous": '<li class="waves-effect"><i class="fas fa-angle-left" style="font-size: 30px"></i></li>',
+                "next": '<li class="waves-effect"><i class="fas fa-angle-right" style="font-size: 30px"></i></li>'
             },
-            "search": "Axtarış: ",
+            "search": "",
             "processing": "Gözləyin...",
             "loadingRecords": "Yüklənir...",
             "infoEmpty": "Məlumat daxil edilməmişdir",
-            "info": "Məlumat Görsədilir _START_-_END_, Ümumi Məlumat sayı _TOTAL_ ",
+            "info": "Məlumat Göstərilir _START_-_END_, Ümumi Məlumat sayı _TOTAL_ ",
             "emptyTable": "Məlumat daxil edilməmişdir",
             "zeroRecords": "Məlumat Tapılmadı",
-            "lengthMenu": "_MENU_ Məlumat Göstər"
+            "lengthMenu": "_MENU_"
 
         },
         "initComplete": function(settings, json) {
-
 
 
 
@@ -45,19 +44,22 @@ $(document).ready(function(e){
                     url: $(this).data("updatelink"),
                     data: {my_data: id},
 
-                    // beforeSend: function() {
-                    //     $('.c_spinner').show();
-                    // },
-                    //
-                    // complete: function() {
-                    //     $('.c_spinner').hide();
-                    // },
+                    beforeSend: function() {
+                        $('.c_spinner').show();
+                    },
+
+                    complete: function() {
+                        $('.c_spinner').hide();
+                    },
 
                     success: function(data) {
                         $("#c_update_form").html(data)
+                        $('select').formSelect();
+                        $('.datepicker').datepicker();
+                        $(".c_form_control").parent().width("620px");
                     },
                     error: function() {
-                        alert('Error occured');
+                        alert('Xəta baş verdi');
                     }
                 });
 
@@ -143,6 +145,8 @@ $(document).ready(function(e){
 
                 } else{
                     $(".c_checkbox").prop("checked" ,false);
+                    idArray = [];
+                    idler = [];
                 }
                 counter++;
 
@@ -182,9 +186,9 @@ $(document).ready(function(e){
             //tablede switche basanda rowun renginin deyismesi
             $(".c_checkbox").on("click", function () {
                 if ($(this).prop("checked")){
-                    $(this).parent().parent().parent().css("background-color", "#FFFF66");
+                    $(this).parent().parent().parent().parent().css("background-color", "#80cbc4 ");
                 }else{
-                    $(this).parent().parent().parent().css("background-color", "#fff");
+                    $(this).parent().parent().parent().parent().css("background-color", "#fff");
                 }
             });
 
@@ -193,16 +197,40 @@ $(document).ready(function(e){
             $(".c_check_all").click(function () {
 
                 if ($(this).prop("checked")){
-                    $(".c_checkbox").parent().parent().parent().css("background-color", "#FFFF66");
+                    $(".c_checkbox").parent().parent().parent().parent().css("background-color", "#80cbc4");
                 }else{
-                    $(".c_checkbox").parent().parent().parent().css("background-color", "#fff");
+                    $(".c_checkbox").parent().parent().parent().parent().css("background-color", "#fff");
                 }
 
             });
 
+            $('.c_row_update').attr('data-tooltip', 'Düzənlə').tooltip();
+            $('.c_row_delete').attr('data-tooltip', 'Sil').tooltip();
+            $(".select-wrapper").click(function () {
+                // alert()
+                $(".c_form_control").prev().prev().width("450pt");
+            })
+            $('.materialboxed').materialbox();
+            $("#datatable_filter").children().width("242");
 
         }
     });
+
+
+    //materialize css in select tagini ve date pickeri initialize etmek
+    $('select').formSelect();
+    $('.datepicker').datepicker();
+    $('.sidenav').sidenav();
+
+
+
+    $(".c_form_control").parent().width("620px");
+
+    //bu class lara tooltip(title) verilir
+    $('.select-wrapper').attr('data-tooltip', 'Məlumat göstər').tooltip();
+    $('.c_delete_all').attr('data-tooltip', 'Seçilən məlumatları sil').tooltip();
+    $('.с_сreate').attr('data-tooltip', 'Yeni məlumat yarat').tooltip();
+
 
 });
 

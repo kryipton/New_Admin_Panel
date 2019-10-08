@@ -31,7 +31,9 @@ class Welcome extends MY_Controller{
         );
         $action_link_update = base_url("Welcome/update/");
         $action_link_create = base_url("Welcome/add/");
+
         $data["create_modal"] = $this->create_view($label_name_and_input_name,$input_name_type,$action_link_create, $action_link_update, $select_name_and_table_name);
+        $data["get_data_link"] = base_url("Welcome/get_data");
 
         $this->load->view('admin/page1/whole_page', $data);
     }

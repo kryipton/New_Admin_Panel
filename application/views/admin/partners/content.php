@@ -2,13 +2,27 @@
 
 <!--tablede hansi rowlarin gorsenmesini isdemirsense o burda yazilir css in icinde yazma onda diger seyfelerdeki tableleride bagliyar :)-->
 <style>
-    .c_head th:nth-child(4){
-        display: none;
-    }
+    /*.c_head th:nth-child(6){*/
+        /*display: none;*/
+    /*}*/
 
-    tbody tr td:nth-child(4){
-        display: none;
-    }
+    /*tbody tr td:nth-child(6){*/
+        /*display: none;*/
+    /*}*/
+    /*.c_head th:nth-child(7){*/
+        /*display: none;*/
+    /*}*/
+
+    /*tbody tr td:nth-child(7){*/
+        /*display: none;*/
+    /*}*/
+    /*.c_head th:nth-child(8){*/
+        /*display: none;*/
+    /*}*/
+
+    /*tbody tr td:nth-child(8){*/
+        /*display: none;*/
+    /*}*/
 </style>
 <!--tablede hansi rowlarin gorsenmesini isdemirsense o burda yazilir css in icinde yazma onda diger seyfelerdeki tableleride bagliyar :)-->
 
@@ -44,15 +58,15 @@
                             <a class="red lighten-1 btn btn-danger mr-1 c_delete_all"><i style="font-size: 13px;" class="fas fa-trash"></i></a>
                         </th><!--switch ve id mutleq olmalidir cunki o data tablenin islemesi ucun lazimdi ve thead in icini siraliyanda databasein tablesinin sirasina uygun siralamaz lazimdi en axirda update delete olacaq onnan evvel eger varsa additional linkler ve onnan evvelde tabledki fieldler-->
                         <th>id</th><!--switch ve id mutleq olmalidir cunki o data tablenin islemesi ucun lazimdi ve thead in icini siraliyanda databasein tablesinin sirasina uygun siralamaz lazimdi en axirda update delete olacaq onnan evvel eger varsa additional linkler ve onnan evvelde tabledki fieldler -->
-                        <th>name</th>
-                        <th>brand</th>
-                        <th>date</th>
-                        <th>img</th>
-                        <th>car_name</th>
-                        <th data-orderable="false">Galereya</th>
-                        <th data-orderable="false">Qiymetler</th>
-                        <th data-orderable="false">Qiymetler2</th>
-                        <th data-orderable="false">Əməliyatlar</th>
+                        <th>Adı(az)</th>
+                        <th>Adı(en)</th>
+                        <th>Adı(ru)</th>
+                        <th>Haqqında(az)</th>
+                        <th>Haqqında(en)</th>
+                        <th>Haqqında(ru)</th>
+                        <th>Profil Şəkli</th>
+                        <th>Link</th>
+                        <th>Əməliyatlar</th>
                     </tr>
                 </thead>
 
@@ -60,18 +74,18 @@
 
                 <tfoot>
                     <tr class="c_head">
-                    <th class="c_switch">switch</th>
-                    <th >id</th>
-                    <th>name</th>
-                    <th>brand</th>
-                    <th>date</th>
-                    <th>img</th>
-                    <th>car_name</th>
-                    <th>Galereya</th>
-                    <th>Qiymetler</th>
-                    <th>Qiymetler2</th>
-                    <th data-orderable="false">Əməliyatlar</th>
-                </tr>
+                        <th class="c_switch">switch</th>
+                        <th>id</th><!--switch ve id mutleq olmalidir cunki o data tablenin islemesi ucun lazimdi ve thead in icini siraliyanda databasein tablesinin sirasina uygun siralamaz lazimdi en axirda update delete olacaq onnan evvel eger varsa additional linkler ve onnan evvelde tabledki fieldler -->
+                        <th>Adı(az)</th>
+                        <th>Adı(en)</th>
+                        <th>Adı(ru)</th>
+                        <th>Haqqında(az)</th>
+                        <th>Haqqında(en)</th>
+                        <th>Haqqında(ru)</th>
+                        <th>Profil Şəkli</th>
+                        <th>Link</th>
+                        <th>Əməliyatlar</th>
+                    </tr>
                 </tfoot>
             </table>
         </div>

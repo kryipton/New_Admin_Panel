@@ -96,7 +96,6 @@ class MY_Controller extends CI_Controller{
 
         }
 
-
 //      eyer cond 1 dise succes linke success alerti ile birlikde redirect edir
         if ($cond == 1){
 
@@ -633,11 +632,11 @@ class MY_Controller extends CI_Controller{
 //        menim duzeltdiyim kodlar
         foreach ($employees->result_array() as $key => $item) {
             $item = array_values($item);
-            array_unshift($item , '<input class="c_checkbox" type="checkbox" id="'. $item[0] .'">');
+            array_unshift($item , '<label><input type="checkbox" class="c_checkbox" id="'. $item[0] .'"/><span></span></label>');
             $count = 0;
             foreach ($item as $k=>$v){
                 if (substr($v, -4) == ".jpg" || substr($v, -4) == ".png" || substr($v, -4) == ".jpeg"){
-                    $item[$k] = '<img width="100px" height ="100px" style="object-fit:contain; height:100px!important; width:100px!important" src="' . base_url($upload_path) . $v .'" alt="Sekil">';
+                    $item[$k] = '<img class="materialboxed" width="100px" height ="100px" style="display: initial; object-fit:contain; height:100px!important; width:100px!important" src="' . base_url($upload_path) . $v .'" alt="Sekil">';
                 }else{
                     if (strlen($v) > 15  && $count != 0){
                         $v = substr($v, 0, 15) . "...";
@@ -654,6 +653,7 @@ class MY_Controller extends CI_Controller{
 
             $data[] = $item;
         }
+
         foreach ($data as $element => $val) {
 
             foreach ($additional_links as $name => $link){
@@ -661,13 +661,11 @@ class MY_Controller extends CI_Controller{
                 $data[$element] = $val;
             }
 
-            $val[] = '<a class="btn btn-primary mr-1 c_row_update " data-updatelink = "' . $get_data_for_update_modal_link . '" onclick="document.querySelector(\'.dialog\').classList.add(\'open\')" ><i class="fas fa-wrench" style="font-size: 15px"></i></a> <a  data-deletelinkold = "' . $row_delete_link . '" data-deletelink = "' . $row_delete_link . '" class="btn btn-danger mr-1 c_row_delete"><i style="font-size: 15px" class="fas fa-trash"></i></a>';
+            $val[] = '<a class="btn btn-primary mr-1 c_row_update " data-updatelink = "' . $get_data_for_update_modal_link . '" onclick="document.querySelector(\'.dialog\').classList.add(\'open\')" ><i class="fas fa-wrench" style="font-size: 15px"></i></a> <a  data-deletelinkold = "' . $row_delete_link . '" data-deletelink = "' . $row_delete_link . '" class="red lighten-1 btn btn-danger mr-1 c_row_delete"><i style="font-size: 15px;" class="fas fa-trash"></i></a>';
             $data[$element] = $val;
 
         }
 //        menim duzeltdiyim kodlar
-
-
 
 
         $total_employees = $this->data_table_2($table_name);
@@ -677,6 +675,7 @@ class MY_Controller extends CI_Controller{
             "recordsFiltered" => $total_employees,
             "data" => $data,
         );
+
         echo json_encode($output);
         exit();
     }
@@ -705,17 +704,28 @@ class MY_Controller extends CI_Controller{
         foreach ($label_name_and_input_name as $key=>$value) {
 
             if ($input_name_type[$value] == "editor"){
-                $html .= '<label for="' . $value . '" style="color: white!important;">' . $key .'</label><textarea  name="'. $value . "_editor" .'">'. $data[$value] .'</textarea><br><br><script>CKEDITOR.replace( "'. $value . "_editor" .'", {});</script>';
+                $html .= '<label for="' . $value . '" style="color: black!important;">' . $key .'</label><textarea  name="'. $value . "_editor" .'">'. $data[$value] .'</textarea><br><br><script>CKEDITOR.replace( "'. $value . "_editor" .'", {});</script>';
             }else{
                 if ($value!="file"){
                     $required="required";
                     $input_value = 'value="' . $data[$value] . '"';
+                    $html .= '<label for="' . $value . '" style="color: black!important;">' . $key .
+                        '</label><input '. $input_value . ' ' . $required . ' id="' . $value . '" name="'. $value . '" class="form-control c_form_control" type="' . $input_name_type[$value]. '"><br><br>';
                 }else{
                     $required="";
-                    $input_value = "";
+                    $input_value = '';
+                    $html .= '<div class="file-field input-field">
+                                <div class="btn">
+                                  <span>Şəkil Seçin</span>
+                                  <input name="'. $value .'" type="file">
+                                </div>
+                                <div class="file-path-wrapper">
+                                  <input class="file-path validate" type="text">
+                                </div>
+                              </div>';
                 }
-                $html .= '<label for="' . $value . '" style="color: white!important;">' . $key .
-                    '</label><input '. $input_value . ' ' . $required . ' id="' . $value . '" name="'. $value . '" class="form-control c_form_control" type="' . $input_name_type[$value]. '"><br><br>';
+//                $html .= '<label for="' . $value . '" style="color: white!important;">' . $key .
+//                    '</label><input '. $input_value . ' ' . $required . ' id="' . $value . '" name="'. $value . '" class="form-control c_form_control" type="' . $input_name_type[$value]. '"><br><br>';
             }
 
         }
@@ -728,7 +738,7 @@ class MY_Controller extends CI_Controller{
 
             $table_data = $this->Model_for_core->core_get($splitted_string_array[0]);
 
-            $html .= '<label for="">'. $splitted_string_array2[1] .'</label><select name="'. $splitted_string_array2[0] .'" class="form-control c_form_control">';
+            $html .= '<label for="">'. $splitted_string_array2[1] .'</label><select name="'. $splitted_string_array2[0] .'" class="c_form_control">';
 
             $html .= '<option value="'. $data[$splitted_string_array2[0]] .'">'. $data[$splitted_string_array2[0]] .'</option>';
 
@@ -745,7 +755,7 @@ class MY_Controller extends CI_Controller{
 
 
 
-        $html2 = '<br><button type="submit" class="btn btn-primary btn-large">Yenilə</button>';
+        $html2 = '<br><button type="submit" class="btn btn-primary ">Yenilə</button>';
 
         return $html . $html2;
 
@@ -755,23 +765,37 @@ class MY_Controller extends CI_Controller{
     {
 
         $first_part = '<div class="dialog2">
-                            <span style="color: #ffffff!important;" class="btn-close"  onclick="document.querySelector(\'.dialog2\').classList.remove(\'open\')"></span>
-                            <h3 style="color: white;">Yeni Məlumat Yaratma</h3>
-                            <form action="'. $action_link_create .'" method="post" enctype="multipart/form-data">';
+                            <span style="color: black!important;" class="btn-close"  onclick="document.querySelector(\'.dialog2\').classList.remove(\'open\')"></span>
+                            <h5 style="color: black;">Yeni Məlumat Yaratma</h5>
+                            <br><br>
+                            <form style="margin:0 auto" action="'. $action_link_create .'" method="post" enctype="multipart/form-data">';
         $second_part="";
         $required="";
         foreach ($label_name_and_input_name as $key=>$value) {
 
             if ($input_name_type[$value] == "editor"){
-                $second_part .= '<label for="' . $value . '" style="color: white!important;">' . $key .'</label><textarea name="'. $value .'"></textarea><br><br><script>CKEDITOR.replace( "'. $value .'", {});</script>';
+                $second_part .= '<label for="' . $value . '" style="color: black!important;">' . $key .'</label><textarea name="'. $value .'"></textarea><br><br><script>CKEDITOR.replace( "'. $value .'", {});</script>';
             }else{
-                if ($value!="file"){
-                    $required="required";
-                }else{
+                if ($value=="file"){
                     $required="";
+                    $second_part .= '<div class="file-field input-field">
+                                      <div class="btn">
+                                        <span>Şəkil Seçin</span>
+                                        <input name="'. $value .'" type="file">
+                                      </div>
+                                      <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                      </div>
+                                    </div>';
+                }else{
+                    $required="required";
+                    $second_part .= '<label for="' . $value . '" style="color: black!important;">' . $key .
+                        '</label><input ' . $required . ' id="' . $value . '" name="'. $value . '" class="form-control c_form_control" type="' . $input_name_type[$value] . '"><br><br>';
+
                 }
-                $second_part .= '<label for="' . $value . '" style="color: white!important;">' . $key .
-                                '</label><input ' . $required . ' id="' . $value . '" name="'. $value . '" class="form-control c_form_control" type="' . $input_name_type[$value]. '"><br><br>';
+
+//                $second_part .= '<label for="' . $value . '" style="color: black!important;">' . $key .
+//                                '</label><input ' . $required . ' id="' . $value . '" name="'. $value . '" class="form-control c_form_control" type="' . $input_name_type[$value] . '"><br><br>';
 
             }
             
@@ -785,7 +809,7 @@ class MY_Controller extends CI_Controller{
 
             $table_data = $this->Model_for_core->core_get($splitted_string_array[0]);
 
-            $second_part .= '<label for="">'. $splitted_string_array2[1] .'</label><select name="'. $splitted_string_array2[0] .'" class="form-control c_form_control">';
+            $second_part .= '<label for="">'. $splitted_string_array2[1] .'</label><select name="'. $splitted_string_array2[0] .'" class="c_form_control">';
 
 //            print_r("<pre>");
 //            print_r($table_data);
@@ -800,13 +824,28 @@ class MY_Controller extends CI_Controller{
         }
         
 
-        $third_part = '<br><button type="submit" class="btn btn-primary btn-large">Əlavə Et</button></form></div>';
+        $third_part = '<br><button type="submit" class="btn btn-primary">Əlavə Et</button></form></div>';
 
 
         $fourth_part = '<div class="dialog">
-                            <span style="color: #ffffff!important;" class="btn-close"  onclick="document.querySelector(\'.dialog\').classList.remove(\'open\')"></span>
-                            <h3 style="color: white;">Məlumatı Yeniləmə</h3>
-                            <form  data-action="'. $action_link_update .'" id="c_update_form" action="" method="post" enctype="multipart/form-data"><br></form></div>';
+                            <span style="color: black!important;" class="btn-close"  onclick="document.querySelector(\'.dialog\').classList.remove(\'open\')"></span>
+                            <h5 style="color: black;">Məlumatı Yeniləmə</h5>
+                            <br><br>
+                            <form  style="margin:0 auto" data-action="'. $action_link_update .'" id="c_update_form" action="" method="post" enctype="multipart/form-data"><br>
+                            
+                             <div class="preloader-wrapper big active c_spinner">
+                                <div class="spinner-layer spinner-blue-only">
+                                  <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                  </div><div class="gap-patch">
+                                    <div class="circle"></div>
+                                  </div><div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                  </div>
+                                </div>
+                             </div>
+                             <p>Zəmət olmasa gözləyin Məlumatlar yüklənir...</p>
+                            </form></div>';
 
 
 

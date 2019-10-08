@@ -9,7 +9,7 @@
 <?php echo $create_modal?>
 <!--    yenileme ve insert ucun modal -->
 
-<?php $this->load->view("admin/page1/content")?>
+<?php $this->load->view("admin/partners/content")?>
 
 <?php $this->load->view("admin/includes/footer")?>
 
