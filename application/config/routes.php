@@ -52,3 +52,59 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+//===Admin panel
+
+//kurslarimiz hissesi
+$route["panel_admin_page_secure_courses_secure_controller"] = "Panel_admin_page_secure_courses/index/";
+$route["panel_admin_page_secure_courses_secure_controller_get_data"] = "Panel_admin_page_secure_courses/get_data/";
+$route["panel_admin_page_secure_courses_secure_controller_get_data_for_update"] = "Panel_admin_page_secure_courses/get_data_for_update/";
+$route["panel_admin_page_secure_courses_secure_controller_add"] = "Panel_admin_page_secure_courses/add/";
+$route["panel_admin_page_secure_courses_secure_controller_update/(.*)"] = "Panel_admin_page_secure_courses/update/$1";
+$route["panel_admin_page_secure_courses_secure_controller_delete/(.*)"] = "Panel_admin_page_secure_courses/delete/$1";
+//kurslarimiz hissesi
+
+
+//partnyorlar hissesi
+$route["panel_admin_page_secure_partners_secure_controller"] = "Panel_admin_page_secure_partners/index/";
+$route["panel_admin_page_secure_partners_secure_controller_get_data"] = "Panel_admin_page_secure_partners/get_data/";
+$route["panel_admin_page_secure_partners_secure_controller_get_data_for_update"] = "Panel_admin_page_secure_partners/get_data_for_update/";
+$route["panel_admin_page_secure_partners_secure_controller_add"] = "Panel_admin_page_secure_partners/add/";
+$route["panel_admin_page_secure_partners_secure_controller_update/(.*)"] = "Panel_admin_page_secure_partners/update/$1";
+$route["panel_admin_page_secure_partners_secure_controller_delete/(.*)"] = "Panel_admin_page_secure_partners/delete/$1";
+//partnyorlar hissesi
+
+
+
+//tedbirler hissesi
+$route["panel_admin_page_secure_events_secure_controller"] = "Panel_admin_page_secure_events/index/";
+$route["panel_admin_page_secure_events_secure_controller_get_data"] = "Panel_admin_page_secure_events/get_data/";
+$route["panel_admin_page_secure_events_secure_controller_get_data_for_update"] = "Panel_admin_page_secure_events/get_data_for_update/";
+$route["panel_admin_page_secure_events_secure_controller_add"] = "Panel_admin_page_secure_events/add/";
+$route["panel_admin_page_secure_events_secure_controller_update/(.*)"] = "Panel_admin_page_secure_events/update/$1";
+$route["panel_admin_page_secure_events_secure_controller_delete/(.*)"] = "Panel_admin_page_secure_events/delete/$1";
+//tedbirler hissesi
+
+
+
+//muellimler hissesi
+$route["panel_admin_page_secure_teachers_secure_controller"] = "Panel_admin_page_secure_teachers/index/";
+$route["panel_admin_page_secure_teachers_secure_controller_get_data"] = "Panel_admin_page_secure_teachers/get_data/";
+$route["panel_admin_page_secure_teachers_secure_controller_get_data_for_update"] = "Panel_admin_page_secure_teachers/get_data_for_update/";
+$route["panel_admin_page_secure_teachers_secure_controller_add"] = "Panel_admin_page_secure_teachers/add/";
+$route["panel_admin_page_secure_teachers_secure_controller_update/(.*)"] = "Panel_admin_page_secure_teachers/update/$1";
+$route["panel_admin_page_secure_teachers_secure_controller_delete/(.*)"] = "Panel_admin_page_secure_teachers/delete/$1";
+//muellimler hissesi
+
+
+//contact hissesi
+$route["panel_admin_page_secure_contact_secure_controller"] = "Panel_admin_page_secure_contact/index/";
+$route["panel_admin_page_secure_contact_secure_controller_get_data"] = "Panel_admin_page_secure_contact/get_data/";
+$route["panel_admin_page_secure_contact_secure_controller_get_data_for_update"] = "Panel_admin_page_secure_contact/get_data_for_update/";
+$route["panel_admin_page_secure_contact_secure_controller_add"] = "Panel_admin_page_secure_contact/add/";
+$route["panel_admin_page_secure_contact_secure_controller_update/(.*)"] = "Panel_admin_page_secure_contact/update/$1";
+$route["panel_admin_page_secure_contact_secure_controller_delete/(.*)"] = "Panel_admin_page_secure_contact/delete/$1";
+//contact hissesi
+
+//=====Admin panel

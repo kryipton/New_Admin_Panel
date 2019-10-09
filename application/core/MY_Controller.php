@@ -38,20 +38,33 @@ class MY_Controller extends CI_Controller{
 //          inputlarin arrayinin icinde gelen deyerin ilk 9 herfi "not_input" dursa demeli o input deyil manual deyer olaraq qebul edilir
             $additional_id  = substr($value, 0, 9);
             $additional_img  = substr($value, 0, 8);
+            $additional_editor  = substr($value, 0,8);
 
 //          inputlarin arrayinde gelen deyerin uzunluqu 9 dan boyukdurse bu if e kecir (eger 9 hrefden boyukdurse demeli "not_input" yazilmis ola biler )
             if (strlen($value) > 9){
 
 //              eger inputun ilk 9 herfi "not_input" dursa onu postnan cagirmir sadece default deyer kimi goturur
                 if ($additional_id != "not_input"){
-                    $post_data = strip_tags($this->input->post($value));
+
+                    if ($additional_editor == "(editor)"){
+                        $value = substr($value, 8);
+                        $post_data = $this->input->post($value);
+                    }else{
+                        $post_data = strip_tags($this->input->post($value));
+                    }
+
                 }else{
                     $post_data = substr($value, 9);
                 }
 
             }else{
                 if (strlen($value) != 0){
-                    $post_data = strip_tags($this->input->post($value));
+                    if ($additional_editor == "(editor)"){
+                        $value = substr($value, 8);
+                        $post_data = $this->input->post($value);
+                    }else{
+                        $post_data = strip_tags($this->input->post($value));
+                    }
                 }
             }
 
@@ -82,7 +95,6 @@ class MY_Controller extends CI_Controller{
             $data[$this->img_key] = $post_data;
 
         }
-
 
 //      eyer cond 1 dise succes linke success alerti ile birlikde redirect edir
         if ($cond == 1){
@@ -115,20 +127,34 @@ class MY_Controller extends CI_Controller{
 
 //          inputlarin arrayinin icinde gelen deyerin ilk 9 herfi "not_input" dursa demeli o input deyil manual deyer olaraq qebul edilir
             $additional_id  = substr($value, 0, 9);
+            $additional_editor  = substr($value, 0,8);
+
 
 //          inputlarin arrayinde gelen deyerin uzunluqu 9 dan boyukdurse bu if e kecir (eger 9 hrefden boyukdurse demeli "not_input" yazilmis ola biler )
             if (strlen($value) > 9){
 
 //              eger inputun ilk 9 herfi "not_input" dursa onu postnan cagirmir sadece default deyer kimi goturur
                 if ($additional_id != "not_input"){
-                    $post_data = strip_tags($this->input->post($value));
+
+                    if ($additional_editor == "(editor)"){
+                        $value = substr($value, 8);
+                        $post_data = $this->input->post($value);
+                    }else{
+                        $post_data = strip_tags($this->input->post($value));
+                    }
+
                 }else{
                     $post_data = substr($value, 9);
                 }
 
             }else{
                 if (strlen($value) != 0){
-                    $post_data = strip_tags($this->input->post($value));
+                    if ($additional_editor == "(editor)"){
+                        $value = substr($value, 8);
+                        $post_data = $this->input->post($value);
+                    }else{
+                        $post_data = strip_tags($this->input->post($value));
+                    }
                 }
             }
 
@@ -195,20 +221,33 @@ class MY_Controller extends CI_Controller{
 //          inputlarin arrayinin icinde gelen deyerin ilk 9 herfi "not_input" dursa demeli o input deyil manual deyer olaraq qebul edilir
             $additional_id  = substr($value, 0, 9);
             $additional_img  = substr($value, 0, 8);
+            $additional_editor  = substr($value, 0,8);
 
 //          inputlarin arrayinde gelen deyerin uzunluqu 9 dan boyukdurse bu if e kecir (eger 9 hrefden boyukdurse demeli "not_input" yazilmis ola biler )
             if (strlen($value) > 9){
 
 //              eger inputun ilk 9 herfi "not_input" dursa onu postnan cagirmir sadece default deyer kimi goturur
                 if ($additional_id != "not_input"){
-                    $post_data = strip_tags($this->input->post($value));
+
+                    if ($additional_editor == "(editor)"){
+                        $value = substr($value, 8);
+                        $post_data = $this->input->post($value);
+                    }else{
+                        $post_data = strip_tags($this->input->post($value));
+                    }
+
                 }else{
                     $post_data = substr($value, 9);
                 }
 
             }else{
                 if (strlen($value) != 0){
-                    $post_data = strip_tags($this->input->post($value));
+                    if ($additional_editor == "(editor)"){
+                        $value = substr($value, 8);
+                        $post_data = $this->input->post($value);
+                    }else{
+                        $post_data = strip_tags($this->input->post($value));
+                    }
                 }
             }
 
@@ -279,20 +318,33 @@ class MY_Controller extends CI_Controller{
 
 //          inputlarin arrayinin icinde gelen deyerin ilk 9 herfi "not_input" dursa demeli o input deyil manual deyer olaraq qebul edilir
             $additional_id  = substr($value, 0, 9);
+            $additional_editor  = substr($value, 0,8);
 
 //          inputlarin arrayinde gelen deyerin uzunluqu 9 dan boyukdurse bu if e kecir (eger 9 hrefden boyukdurse demeli "not_input" yazilmis ola biler )
             if (strlen($value) > 9){
 
 //              eger inputun ilk 9 herfi "not_input" dursa onu postnan cagirmir sadece default deyer kimi goturur
                 if ($additional_id != "not_input"){
-                    $post_data = strip_tags($this->input->post($value));
+
+                    if ($additional_editor == "(editor)"){
+                        $value = substr($value, 8);
+                        $post_data = $this->input->post($value);
+                    }else{
+                        $post_data = strip_tags($this->input->post($value));
+                    }
+
                 }else{
                     $post_data = substr($value, 9);
                 }
 
             }else{
                 if (strlen($value) != 0){
-                    $post_data = strip_tags($this->input->post($value));
+                    if ($additional_editor == "(editor)"){
+                        $value = substr($value, 8);
+                        $post_data = $this->input->post($value);
+                    }else{
+                        $post_data = strip_tags($this->input->post($value));
+                    }
                 }
             }
 
@@ -335,35 +387,80 @@ class MY_Controller extends CI_Controller{
 
     public function delete_db_img($where, $success_link, $error_link, $upload_path, $table_name, $img_column_name){
 
-        $row = $this->Model_for_core->core_get_where_row($where, $table_name);
+        if (strpos($where["id"], ',') !== false){
+            $id_array = explode(",", $where["id"]);
 
-        if ($row[$img_column_name] != "default.png" && !empty($row[$img_column_name])){
-            unlink($upload_path . $row[$img_column_name]);
-        }
+            foreach ($id_array as $item) {
+                $row = $this->Model_for_core->core_get_where_row(array("id" => $item), $table_name);
 
-        $result = $this->Model_for_core->delete_class($where, $table_name);
+                if ($row[$img_column_name] != "default.png" && !empty($row[$img_column_name])){
+                    unlink($upload_path . $row[$img_column_name]);
+                }
 
-        if ($result == 1){
-            $this->session->set_flashdata("success", "Məlumat Silindi!");
-            redirect($success_link);
+                $result = $this->Model_for_core->core_delete(array("id" => $item), $table_name);
+
+            }
+
+            if ($result == 1){
+                $this->session->set_flashdata("success", "Məlumatlar Silindi!");
+                redirect($success_link);
+            }else{
+                $this->session->set_flashdata("alert", "Xəta Baş Verdi!");
+                redirect($error_link);
+            }
+
         }else{
-            $this->session->set_flashdata("alert", "Xəta Baş Verdi!");
-            redirect($error_link);
+            $row = $this->Model_for_core->core_get_where_row($where, $table_name);
+
+            if ($row[$img_column_name] != "default.png" && !empty($row[$img_column_name])){
+                unlink($upload_path . $row[$img_column_name]);
+            }
+
+            $result = $this->Model_for_core->core_delete($where, $table_name);
+
+            if ($result == 1){
+                $this->session->set_flashdata("success", "Məlumat Silindi!");
+                redirect($success_link);
+            }else{
+                $this->session->set_flashdata("alert", "Xəta Baş Verdi!");
+                redirect($error_link);
+            }
         }
+
+
 
     }
 
     public function delete_db($where, $success_link, $error_link, $table_name){
 
-        $result = $this->Model_for_core->delete_class($where, $table_name);
+        if (strpos($where["id"], ',') !== false){
+            $id_array = explode(",", $where["id"]);
 
-        if ($result == 1){
-            $this->session->set_flashdata("success", "Məlumat Silindi!");
-            redirect($success_link);
+            foreach ($id_array as $item) {
+                $result = $this->Model_for_core->core_delete(array("id" => $item), $table_name);
+            }
+
+            if ($result == 1){
+                $this->session->set_flashdata("success", "Məlumatlar Silindi!");
+                redirect($success_link);
+            }else{
+                $this->session->set_flashdata("alert", "Xəta Baş Verdi!");
+                redirect($error_link);
+            }
+
         }else{
-            $this->session->set_flashdata("alert", "Xəta Baş Verdi!");
-            redirect($error_link);
+
+            $result = $this->Model_for_core->core_delete($where, $table_name);
+
+            if ($result == 1){
+                $this->session->set_flashdata("success", "Məlumat Silindi!");
+                redirect($success_link);
+            }else{
+                $this->session->set_flashdata("alert", "Xəta Baş Verdi!");
+                redirect($error_link);
+            }
         }
+
 
     }
 
@@ -425,6 +522,7 @@ class MY_Controller extends CI_Controller{
 //======================================== Dinamik Ajax update functionlari ===================================================
 
 
+
 //======================================== Dinamik Ajax Sekil upload(galereya) functionlari ===================================================
 
     public function insert_db_ajax_img($upload_date_field_name, $upload_path, $input_name, $field_name ,$table_name){
@@ -465,7 +563,7 @@ class MY_Controller extends CI_Controller{
 
 //======================================== Dinamik Data table kodlari ===================================================
 
-    public function data_table($valid_columns, $table_name, $upload_path)
+    public function data_table($valid_columns, $additional_links, $table_name, $upload_path, $get_data_for_update_modal_link, $row_delete_link)
     {
         $draw = intval($this->input->post("draw"));
         $start = intval($this->input->post("start"));
@@ -493,24 +591,18 @@ class MY_Controller extends CI_Controller{
         }
 
 
-//        $valid_columns = array(
-//            0=>'emp_no',
-//            1=>'birth_date',
-//            2=>'first_name',
-//            3=>'last_name',
-//            4=>'gender',
-//            5=>'hire_date',
-//        );
-
-
-
         if(!isset($valid_columns[$col]))
         {
             $order = null;
         }
         else
         {
-            $order = $valid_columns[$col];
+            if ($col >= 1){
+                $order = $valid_columns[$col - 1];
+            }else{
+                $order = $valid_columns[$col];
+            }
+
         }
         if($order !=null)
         {
@@ -536,45 +628,44 @@ class MY_Controller extends CI_Controller{
         $this->db->limit($length,$start);
         $employees = $this->db->get($table_name);
         $data = array();
-//        foreach($employees->result() as $rows)
-//        {
-//
-//            $data[]= array(
-////                $rows->emp_no,
-//                $rows->birth_date,
-//                $rows->first_name,
-//                $rows->last_name,
-//                $rows->gender,
-//                $rows->hire_date,
-//                '<a href="#" class="btn btn-warning mr-1">Edit</a>
-//                 <a href="#" class="btn btn-danger mr-1">Delete</a>',
-//
-//            );
-//        }
-
 
 //        menim duzeltdiyim kodlar
         foreach ($employees->result_array() as $key => $item) {
             $item = array_values($item);
-
+            array_unshift($item , '<label><input type="checkbox" class="c_checkbox" id="'. $item[0] .'"/><span></span></label>');
+            $count = 0;
             foreach ($item as $k=>$v){
                 if (substr($v, -4) == ".jpg" || substr($v, -4) == ".png" || substr($v, -4) == ".jpeg"){
-                    $item[$k] = '<img width="100px" height ="100px" style="object-fit:contain" src="' . $upload_path . $v .'" alt="Sekil">';
+                    $item[$k] = '<img class="materialboxed" width="100px" height ="100px" style="display: initial; object-fit:contain; height:100px!important; width:100px!important" src="' . base_url($upload_path) . $v .'" alt="Sekil">';
                 }else{
-                    $item[$k] = '<span class="c_update_link" data-url = "'  . '">' . $v . '</span>';
+                    if (strlen($v) > 15  && $count != 0){
+                        $v = substr($v, 0, 15) . "...";
+                    }
+                    if ($count != 1){
+                        $item[$k] = '<span class="c_update_link" >' . $v . '</span>';
+                    }else{
+                        $item[$k] = '<span class="c_update_link c_id" >' . $v . '</span>';
+                    }
+
                 }
+                $count++;
             }
 
             $data[] = $item;
         }
-        foreach ($data as $element => $val) {
-            $val[] = '<a class="btn btn-warning mr-1" onclick="document.querySelector(\'.dialog\').classList.add(\'open\')" >Edit</a> <a class="btn btn-danger mr-1">Delete</a>';
 
+        foreach ($data as $element => $val) {
+
+            foreach ($additional_links as $name => $link){
+                $val[] = '<a data-href="'. $link .'" href="'. $link .'" class="btn btn-primary c_other_link">'. $name .'</a>';
+                $data[$element] = $val;
+            }
+
+            $val[] = '<a class="btn btn-primary mr-1 c_row_update " data-updatelink = "' . $get_data_for_update_modal_link . '" onclick="document.querySelector(\'.dialog\').classList.add(\'open\')" ><i class="fas fa-wrench" style="font-size: 15px"></i></a> <a  data-deletelinkold = "' . $row_delete_link . '" data-deletelink = "' . $row_delete_link . '" class="red lighten-1 btn btn-danger mr-1 c_row_delete"><i style="font-size: 15px;" class="fas fa-trash"></i></a>';
             $data[$element] = $val;
+
         }
 //        menim duzeltdiyim kodlar
-
-
 
 
         $total_employees = $this->data_table_2($table_name);
@@ -584,6 +675,7 @@ class MY_Controller extends CI_Controller{
             "recordsFiltered" => $total_employees,
             "data" => $data,
         );
+
         echo json_encode($output);
         exit();
     }
@@ -598,6 +690,172 @@ class MY_Controller extends CI_Controller{
 
 //======================================== Dinamik Data table kodlari ===================================================
 
+
+//======================================== Dinamik update ve insert view yazdirmaq ===================================================
+
+
+    public function update_view($where,$table_name,$label_name_and_input_name, $input_name_type, $select_name_and_table_name)
+    {
+
+        $data = $this->Model_for_core->core_get_where_row($where, $table_name);
+
+        $html="";
+
+        foreach ($label_name_and_input_name as $key=>$value) {
+
+            if ($input_name_type[$value] == "editor"){
+                $html .= '<label for="' . $value . '" style="color: black!important;">' . $key .'</label><textarea  name="'. $value . "_editor" .'">'. $data[$value] .'</textarea><br><br><script>CKEDITOR.replace( "'. $value . "_editor" .'", {});</script>';
+            }else{
+                if ($value!="file"){
+                    $required="required";
+                    $input_value = 'value="' . $data[$value] . '"';
+                    $html .= '<label for="' . $value . '" style="color: black!important;">' . $key .
+                        '</label><input '. $input_value . ' ' . $required . ' id="' . $value . '" name="'. $value . '" class="form-control c_form_control" type="' . $input_name_type[$value]. '"><br><br>';
+                }else{
+                    $required="";
+                    $input_value = '';
+                    $html .= '<div class="file-field input-field">
+                                <div class="btn">
+                                  <span>Şəkil Seçin</span>
+                                  <input name="'. $value .'" type="file">
+                                </div>
+                                <div class="file-path-wrapper">
+                                  <input class="file-path validate" type="text">
+                                </div>
+                              </div>';
+                }
+//                $html .= '<label for="' . $value . '" style="color: white!important;">' . $key .
+//                    '</label><input '. $input_value . ' ' . $required . ' id="' . $value . '" name="'. $value . '" class="form-control c_form_control" type="' . $input_name_type[$value]. '"><br><br>';
+            }
+
+        }
+
+
+
+        foreach ($select_name_and_table_name as $key => $value) {
+            $splitted_string_array = explode(".",$value);
+            $splitted_string_array2 = explode(".",$key);
+
+            $table_data = $this->Model_for_core->core_get($splitted_string_array[0]);
+            $table_data_row = $this->Model_for_core->core_get_where_row(array("id" => $data[$splitted_string_array2[0]]),$splitted_string_array[0]);
+
+
+            $html .= '<label for="">'. $splitted_string_array2[1] .'</label><select name="'. $splitted_string_array2[0] .'" class="c_form_control">';
+
+
+            $html .= '<option value="'. $table_data_row["id"] .'">'. $table_data_row["name_az"] .'</option>';
+
+            foreach ($table_data as $item){
+
+                if ($data[$splitted_string_array2[0]] != $item["id"]){
+                    $html .= '<option value="'. $item["id"] .'">'. $item[$splitted_string_array[1]] .'</option>';
+                }
+            }
+            $html .= '</select><br><br>';
+
+
+        }
+
+
+
+        $html2 = '<br><button type="submit" class="btn btn-primary ">Yenilə</button>';
+
+        return $html . $html2;
+
+    }
+
+    public function create_view($label_name_and_input_name, $input_name_type, $action_link_create, $action_link_update, $select_name_and_table_name)
+    {
+
+        $first_part = '<div class="dialog2">
+                            <span style="color: black!important;" class="btn-close"  onclick="document.querySelector(\'.dialog2\').classList.remove(\'open\')"></span>
+                            <h5 style="color: black;">Yeni Məlumat Yaratma</h5>
+                            <br><br>
+                            <form style="margin:0 auto" action="'. $action_link_create .'" method="post" enctype="multipart/form-data">';
+        $second_part="";
+        $required="";
+        foreach ($label_name_and_input_name as $key=>$value) {
+
+            if ($input_name_type[$value] == "editor"){
+                $second_part .= '<label for="' . $value . '" style="color: black!important;">' . $key .'</label><textarea name="'. $value .'"></textarea><br><br><script>CKEDITOR.replace( "'. $value .'", {});</script>';
+            }else{
+                if ($value=="file"){
+                    $required="";
+                    $second_part .= '<div class="file-field input-field">
+                                      <div class="btn">
+                                        <span>Şəkil Seçin</span>
+                                        <input name="'. $value .'" type="file">
+                                      </div>
+                                      <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                      </div>
+                                    </div>';
+                }else{
+                    $required="required";
+                    $second_part .= '<label for="' . $value . '" style="color: black!important;">' . $key .
+                        '</label><input ' . $required . ' id="' . $value . '" name="'. $value . '" class="form-control c_form_control" type="' . $input_name_type[$value] . '"><br><br>';
+
+                }
+
+//                $second_part .= '<label for="' . $value . '" style="color: black!important;">' . $key .
+//                                '</label><input ' . $required . ' id="' . $value . '" name="'. $value . '" class="form-control c_form_control" type="' . $input_name_type[$value] . '"><br><br>';
+
+            }
+            
+        }
+
+
+        foreach ($select_name_and_table_name as $key => $value) {
+            $splitted_string_array = explode(".",$value);
+            $splitted_string_array2 = explode(".",$key);
+
+
+            $table_data = $this->Model_for_core->core_get($splitted_string_array[0]);
+
+            $second_part .= '<label for="">'. $splitted_string_array2[1] .'</label><select name="'. $splitted_string_array2[0] .'" class="c_form_control">';
+
+
+            foreach ($table_data as $item){
+                $second_part .= '<option value="'. $item["id"] .'">'. $item[$splitted_string_array[1]] .'</option>';
+            }
+            $second_part .= '</select><br><br>';
+
+
+        }
+        
+
+        $third_part = '<br><button type="submit" class="btn btn-primary">Əlavə Et</button></form></div>';
+
+
+        $fourth_part = '<div class="dialog">
+                            <span style="color: black!important;" class="btn-close"  onclick="document.querySelector(\'.dialog\').classList.remove(\'open\')"></span>
+                            <h5 style="color: black;">Məlumatı Yeniləmə</h5>
+                            <br><br>
+                            <form  style="margin:0 auto" data-action="'. $action_link_update .'" id="c_update_form" action="" method="post" enctype="multipart/form-data"><br>
+                            
+                             <div class="preloader-wrapper big active c_spinner">
+                                <div class="spinner-layer spinner-blue-only">
+                                  <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                  </div><div class="gap-patch">
+                                    <div class="circle"></div>
+                                  </div><div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                  </div>
+                                </div>
+                             </div>
+                             <p>Zəmət olmasa gözləyin Məlumatlar yüklənir...</p>
+                            </form></div>';
+
+
+
+        return $first_part . $second_part . $third_part . $fourth_part;
+
+
+
+    }
+
+//======================================== Dinamik update ve insert view yazdirmaq ===================================================
 
 
 

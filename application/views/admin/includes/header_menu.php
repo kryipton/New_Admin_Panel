@@ -1,49 +1,31 @@
-
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container-fluid">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html">Edmin </a>
-            <div class="nav-collapse collapse navbar-inverse-collapse">
-                <ul class="nav nav-icons">
-                    <li class="active"><a href="#"><i class="icon-envelope"></i></a></li>
-                    <li><a href="#"><i class="icon-eye-open"></i></a></li>
-                    <li><a href="#"><i class="icon-bar-chart"></i></a></li>
-                </ul>
-                <form class="navbar-search pull-left input-append" action="#">
-                    <input type="text" class="span3">
-                    <button class="btn" type="button">
-                        <i class="icon-search"></i>
-                    </button>
-                </form>
-                <ul class="nav pull-right">
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
-                            <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Item No. 1</a></li>
-                            <li><a href="#">Don't Click</a></li>
-                            <li class="divider"></li>
-                            <li class="nav-header">Example Header</li>
-                            <li><a href="#">A Separated link</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Support </a></li>
-                    <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="images/user.png" class="nav-avatar" />
-                            <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Your Profile</a></li>
-                            <li><a href="#">Edit Profile</a></li>
-                            <li><a href="#">Account Settings</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.nav-collapse -->
+<div class="nav" style="background-color: #238c80">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+        <div class="nav-title">
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i style="font-size: 30px" class="fas fa-bars"></i></a>
         </div>
     </div>
-    <!-- /navbar-inner -->
+
 </div>
-<!-- /navbar -->
+
+
+
+<ul id="slide-out" class="sidenav">
+    <li>
+        <div class="user-view">
+            <div class="background">
+                <img src="https://materializecss.com/images/office.jpg">
+            </div>
+            <a href="#user"><img class="circle" src="<?php echo base_url("public/admin/images/admin.png")?>"></a>
+            <a href="#name"><span class="white-text name">Admin admin</span></a>
+            <a href="#email"><span class="white-text email">admin@gmail.com</span></a>
+        </div>
+    </li>
+    <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_courses_secure_controller")?>">Kurslarmız</a></li>
+    <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_partners_secure_controller")?>">Əməkdaşlarımız</a></li>
+    <li><a class="waves-effect" href="#!">Məzunlarımız</a></li>
+    <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_teachers_secure_controller")?>">Müəllimlərimiz</a></li>
+    <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_events_secure_controller")?>">Tədbirlər</a></li>
+    <li><a class="waves-effect" href="#!">Haqqımızda</a></li>
+    <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_contact_secure_controller")?>">Əlaqə</a></li>
+</ul>
