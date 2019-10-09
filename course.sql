@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2019 at 09:45 PM
+-- Generation Time: Oct 09, 2019 at 04:17 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -62,15 +62,17 @@ CREATE TABLE `courses` (
   `lesson_start_hour` time NOT NULL,
   `lesson_end_hour` time NOT NULL,
   `whole_hour` int(11) NOT NULL,
-  `whole_month` int(11) NOT NULL
+  `whole_month` int(11) NOT NULL,
+  `teacher_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`id`, `name_az`, `name_en`, `name_ru`, `desc_az`, `desc_en`, `desc_ru`, `img`, `start_date`, `max_student`, `lesson_start_hour`, `lesson_end_hour`, `whole_hour`, `whole_month`) VALUES
-(10, 'asda', 'asdsad', 'asdasd', '<p>asdas</p>\r\n', '<p>asdas</p>\r\n', '<p>asdasd</p>\r\n', 'default.png', '2019-10-12', 222, '22:22:00', '22:22:00', 2222, 2222);
+INSERT INTO `courses` (`id`, `name_az`, `name_en`, `name_ru`, `desc_az`, `desc_en`, `desc_ru`, `img`, `start_date`, `max_student`, `lesson_start_hour`, `lesson_end_hour`, `whole_hour`, `whole_month`, `teacher_id`) VALUES
+(15, 'asdasd', 'asdasd', 'asdasd', '<p>asdsadasd</p>\r\n', '<p>asdasd</p>\r\n', '<p>asdasd</p>\r\n', 'avatar.png', '0222-02-22', 222, '22:22:00', '22:22:00', 22, 222, 1),
+(16, 'asdas', 'asdsa', 'asdsa', '<p>asdsa</p>\r\n', '<p>asdasd</p>\r\n', '<p>asdsad</p>\r\n', 'default.png', '0022-02-22', 2222, '22:22:00', '22:22:00', 22, 2222, 2);
 
 -- --------------------------------------------------------
 
@@ -90,6 +92,13 @@ CREATE TABLE `events` (
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id`, `name_az`, `name_en`, `name_ru`, `desc_az`, `desc_en`, `desc_ru`, `img`, `date`) VALUES
+(1, 'xzczxc', 'xxcvxcvxvx', 'asdasd', '<p>Zx</p>\r\n', '<blockquote>\r\n<p>ZXZXZ</p>\r\n</blockquote>\r\n', '<p>XZxzX</p>\r\n', 'default.png', '0222-02-22');
+
 -- --------------------------------------------------------
 
 --
@@ -107,6 +116,13 @@ CREATE TABLE `partner` (
   `img` varchar(255) NOT NULL,
   `link` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `partner`
+--
+
+INSERT INTO `partner` (`id`, `name_az`, `name_en`, `name_ru`, `desc_az`, `desc_en`, `desc_ru`, `img`, `link`) VALUES
+(1, 'az', 'asdsa', 'asdas', '<p>asdsad</p>\r\n', '<p>asdas</p>\r\n', '<p>asdasd</p>\r\n', 'default.png', 'dasd');
 
 -- --------------------------------------------------------
 
@@ -126,6 +142,14 @@ CREATE TABLE `teachers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Dumping data for table `teachers`
+--
+
+INSERT INTO `teachers` (`id`, `name_az`, `name_en`, `name_ru`, `desc_az`, `desc_en`, `desc_ru`, `img`) VALUES
+(1, 'cavid leleyev', 'asdasd', 'asdas', '<p>asdasasd</p>\r\n', '<p>asdasd</p>\r\n', '<p>asdasd</p>\r\n', 'avatar.png'),
+(2, 'asd', 'asdasd', 'asdas', '<p>asdasasd</p>\r\n', '<p>asdasd</p>\r\n', '<p>asdasd</p>\r\n', 'avatar.png');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -139,7 +163,8 @@ ALTER TABLE `contact`
 -- Indexes for table `courses`
 --
 ALTER TABLE `courses`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `teacher_id` (`teacher_id`);
 
 --
 -- Indexes for table `events`
@@ -173,7 +198,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -185,13 +210,23 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `partner`
 --
 ALTER TABLE `partner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `teachers`
 --
 ALTER TABLE `teachers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `courses`
+--
+ALTER TABLE `courses`
+  ADD CONSTRAINT `courses_ibfk_1` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

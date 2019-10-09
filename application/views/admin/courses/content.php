@@ -23,6 +23,15 @@
     tbody tr td:nth-child(8){
         display: none;
     }
+
+    .c_head th:nth-child(16){
+        display: none;
+    }
+
+    tbody tr td:nth-child(16){
+        display: none;
+    }
+
 </style>
 <!--tablede hansi rowlarin gorsenmesini isdemirsense o burda yazilir css in icinde yazma onda diger seyfelerdeki tableleride bagliyar :)-->
 
@@ -71,6 +80,7 @@
                         <th>Dərsin Bitmə saatı</th>
                         <th>Kursun toplam saatı</th>
                         <th>Kursun toplam ayı</th>
+                        <th>Müəllimin idsi</th>
                         <th>Əməliyatlar</th>
                     </tr>
                 </thead>
@@ -94,6 +104,7 @@
                         <th>Dərsin Bitmə saatı</th>
                         <th>Kursun toplam saatı</th>
                         <th>Kursun toplam ayı</th>
+                        <th>Müəllimin idsi</th>
                         <th>Əməliyatlar</th>
                     </tr>
                 </tfoot>

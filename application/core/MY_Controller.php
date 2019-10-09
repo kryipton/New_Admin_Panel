@@ -737,15 +737,18 @@ class MY_Controller extends CI_Controller{
             $splitted_string_array2 = explode(".",$key);
 
             $table_data = $this->Model_for_core->core_get($splitted_string_array[0]);
+            $table_data_row = $this->Model_for_core->core_get_where_row(array("id" => $data[$splitted_string_array2[0]]),$splitted_string_array[0]);
+
 
             $html .= '<label for="">'. $splitted_string_array2[1] .'</label><select name="'. $splitted_string_array2[0] .'" class="c_form_control">';
 
-            $html .= '<option value="'. $data[$splitted_string_array2[0]] .'">'. $data[$splitted_string_array2[0]] .'</option>';
+
+            $html .= '<option value="'. $table_data_row["id"] .'">'. $table_data_row["name_az"] .'</option>';
 
             foreach ($table_data as $item){
 
-                if ($data[$splitted_string_array2[0]] != $item[$splitted_string_array[1]]){
-                    $html .= '<option value="'. $item[$splitted_string_array[1]] .'">'. $item[$splitted_string_array[1]] .'</option>';
+                if ($data[$splitted_string_array2[0]] != $item["id"]){
+                    $html .= '<option value="'. $item["id"] .'">'. $item[$splitted_string_array[1]] .'</option>';
                 }
             }
             $html .= '</select><br><br>';
@@ -811,12 +814,9 @@ class MY_Controller extends CI_Controller{
 
             $second_part .= '<label for="">'. $splitted_string_array2[1] .'</label><select name="'. $splitted_string_array2[0] .'" class="c_form_control">';
 
-//            print_r("<pre>");
-//            print_r($table_data);
-//            die();
 
             foreach ($table_data as $item){
-                $second_part .= '<option value="'. $item[$splitted_string_array[1]] .'">'. $item[$splitted_string_array[1]] .'</option>';
+                $second_part .= '<option value="'. $item["id"] .'">'. $item[$splitted_string_array[1]] .'</option>';
             }
             $second_part .= '</select><br><br>';
 
