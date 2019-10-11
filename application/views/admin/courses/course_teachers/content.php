@@ -1,14 +1,24 @@
 
 
 <!--tablede hansi rowlarin gorsenmesini isdemirsense o burda yazilir css in icinde yazma onda diger seyfelerdeki tableleride bagliyar :)-->
+<!--tablede hansi rowlarin gorsenmesini isdemirsense o burda yazilir css in icinde yazma onda diger seyfelerdeki tableleride bagliyar :)-->
 <style>
-    .c_head th:nth-child(6){
+    .c_head th:nth-child(1){
         display: none;
     }
 
-    tbody tr td:nth-child(6){
+    tbody tr td:nth-child(1){
         display: none;
     }
+
+    .c_head th:nth-child(6){
+    display: none;
+    }
+
+    tbody tr td:nth-child(6){
+    display: none;
+    }
+
     .c_head th:nth-child(7){
         display: none;
     }
@@ -16,6 +26,7 @@
     tbody tr td:nth-child(7){
         display: none;
     }
+
     .c_head th:nth-child(8){
         display: none;
     }
@@ -24,33 +35,27 @@
         display: none;
     }
 
-    .c_head th:nth-child(12){
-        display: none;
-    }
-
-    tbody tr td:nth-child(12){
+    .c_row_update{
         display: none;
     }
 
 
-    .c_head th:nth-child(13){
-        display: none;
+
+    .select-wrapper{
+        margin: 0 auto;
     }
 
-    tbody tr td:nth-child(13){
-        display: none;
-    }
+    /*.dataTables_paginate{*/
+        /*display: none;*/
+    /*}*/
 
-    .c_head th:nth-child(14){
-        display: none;
-    }
+    /*.dataTables_length{*/
+        /*display: none;*/
+    /*}*/
 
-    tbody tr td:nth-child(14){
-        display: none;
-    }
+
 
 </style>
-<!--tablede hansi rowlarin gorsenmesini isdemirsense o burda yazilir css in icinde yazma onda diger seyfelerdeki tableleride bagliyar :)-->
 
 
 <div class="content">
@@ -91,13 +96,6 @@
                         <th>Haqqında(en)</th>
                         <th>Haqqında(ru)</th>
                         <th>Profil Şəkli</th>
-                        <th>Başlama Günü</th>
-                        <th>Max Tələbə sayı</th>
-                        <th>Dərsin Başlama saatı</th>
-                        <th>Dərsin Bitmə saatı</th>
-                        <th>Kursun toplam saatı</th>
-                        <th>Kursun toplam ayı</th>
-                        <th>Dərs deyəcek müəllimlər</th>
                         <th>Əməliyatlar</th>
                     </tr>
                 </thead>
@@ -115,13 +113,6 @@
                         <th>Haqqında(en)</th>
                         <th>Haqqında(ru)</th>
                         <th>Profil Şəkli</th>
-                        <th>Başlama Günü</th>
-                        <th>Max Tələbə sayı</th>
-                        <th>Dərsin Başlama saatı</th>
-                        <th>Dərsin Bitmə saatı</th>
-                        <th>Kursun toplam saatı</th>
-                        <th>Kursun toplam ayı</th>
-                        <th>Dərs deyəcek müəllimlər</th>
                         <th>Əməliyatlar</th>
                     </tr>
                 </tfoot>

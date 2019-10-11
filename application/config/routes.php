@@ -65,6 +65,15 @@ $route["panel_admin_page_secure_courses_secure_controller_update/(.*)"] = "Panel
 $route["panel_admin_page_secure_courses_secure_controller_delete/(.*)"] = "Panel_admin_page_secure_courses/delete/$1";
 //kurslarimiz hissesi
 
+//kurslarimizin mellimler hissesi
+$route["panel_admin_page_secure_courses_secure_controller_teachers/(.*)"] = "Panel_admin_page_secure_courses_teachers/index/$1";
+$route["panel_admin_page_secure_courses_secure_controller_teachers_get_data/(.*)"] = "Panel_admin_page_secure_courses_teachers/get_data/$1";
+$route["panel_admin_page_secure_courses_secure_controller_teachers_add/(.*)"] = "Panel_admin_page_secure_courses_teachers/add/$1";
+$route["panel_admin_page_secure_courses_secure_controller_teachers_delete/(.*)/(.*)"] = "Panel_admin_page_secure_courses_teachers/delete/$1/$2";
+
+//kurslarimizin mellimler hissesi
+
+
 
 //partnyorlar hissesi
 $route["panel_admin_page_secure_partners_secure_controller"] = "Panel_admin_page_secure_partners/index/";
@@ -98,6 +107,17 @@ $route["panel_admin_page_secure_teachers_secure_controller_delete/(.*)"] = "Pane
 //muellimler hissesi
 
 
+
+//mezunlar hissesi
+$route["panel_admin_page_secure_alumni_secure_controller"] = "Panel_admin_page_secure_alumni/index/";
+$route["panel_admin_page_secure_alumni_secure_controller_get_data"] = "Panel_admin_page_secure_alumni/get_data/";
+$route["panel_admin_page_secure_alumni_secure_controller_get_data_for_update"] = "Panel_admin_page_secure_alumni/get_data_for_update/";
+$route["panel_admin_page_secure_alumni_secure_controller_add"] = "Panel_admin_page_secure_alumni/add/";
+$route["panel_admin_page_secure_alumni_secure_controller_update/(.*)"] = "Panel_admin_page_secure_alumni/update/$1";
+$route["panel_admin_page_secure_alumni_secure_controller_delete/(.*)"] = "Panel_admin_page_secure_alumni/delete/$1";
+//mezunlar hissesi
+
+
 //contact hissesi
 $route["panel_admin_page_secure_contact_secure_controller"] = "Panel_admin_page_secure_contact/index/";
 $route["panel_admin_page_secure_contact_secure_controller_get_data"] = "Panel_admin_page_secure_contact/get_data/";
@@ -106,5 +126,16 @@ $route["panel_admin_page_secure_contact_secure_controller_add"] = "Panel_admin_p
 $route["panel_admin_page_secure_contact_secure_controller_update/(.*)"] = "Panel_admin_page_secure_contact/update/$1";
 $route["panel_admin_page_secure_contact_secure_controller_delete/(.*)"] = "Panel_admin_page_secure_contact/delete/$1";
 //contact hissesi
+
+
+
+//haqqimizda hissesi
+$route["panel_admin_page_secure_about_secure_controller"] = "Panel_admin_page_secure_about/index/";
+$route["panel_admin_page_secure_about_secure_controller_get_data"] = "Panel_admin_page_secure_about/get_data/";
+$route["panel_admin_page_secure_about_secure_controller_get_data_for_update"] = "Panel_admin_page_secure_about/get_data_for_update/";
+$route["panel_admin_page_secure_about_secure_controller_add"] = "Panel_admin_page_secure_about/add/";
+$route["panel_admin_page_secure_about_secure_controller_update/(.*)"] = "Panel_admin_page_secure_about/update/$1";
+$route["panel_admin_page_secure_about_secure_controller_delete/(.*)"] = "Panel_admin_page_secure_about/delete/$1";
+//haqqimizda hissesi
 
 //=====Admin panel

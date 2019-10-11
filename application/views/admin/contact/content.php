@@ -18,13 +18,29 @@
     tbody tr td:nth-child(2){
         display: none;
     }
-    /*.c_head th:nth-child(8){*/
-        /*display: none;*/
-    /*}*/
 
-    /*tbody tr td:nth-child(8){*/
-        /*display: none;*/
-    /*}*/
+    .c_row_delete{
+        display: none;
+    }
+
+    .dataTables_filter{
+        display: none!important;
+    }
+
+    .select-wrapper{
+        margin: 0 auto;
+    }
+
+    .dataTables_paginate{
+        display: none;
+    }
+
+    .dataTables_length{
+        display: none;
+    }
+
+
+
 </style>
 <!--tablede hansi rowlarin gorsenmesini isdemirsense o burda yazilir css in icinde yazma onda diger seyfelerdeki tableleride bagliyar :)-->
 
@@ -60,9 +76,9 @@
                             <a class="red lighten-1 btn btn-danger mr-1 c_delete_all"><i style="font-size: 13px;" class="fas fa-trash"></i></a>
                         </th><!--switch ve id mutleq olmalidir cunki o data tablenin islemesi ucun lazimdi ve thead in icini siraliyanda databasein tablesinin sirasina uygun siralamaz lazimdi en axirda update delete olacaq onnan evvel eger varsa additional linkler ve onnan evvelde tabledki fieldler-->
                         <th>id</th><!--switch ve id mutleq olmalidir cunki o data tablenin islemesi ucun lazimdi ve thead in icini siraliyanda databasein tablesinin sirasina uygun siralamaz lazimdi en axirda update delete olacaq onnan evvel eger varsa additional linkler ve onnan evvelde tabledki fieldler -->
-                        <th>Haqqında(az)</th>
-                        <th>Haqqında(en)</th>
-                        <th>Haqqında(ru)</th>
+                        <th>Əlaqə(az)</th>
+                        <th>Əlaqə(en)</th>
+                        <th>Əlaqə(ru)</th>
                         <th>Əməliyatlar</th>
                     </tr>
                 </thead>
@@ -73,9 +89,9 @@
                     <tr class="c_head">
                         <th class="c_switch">switch</th>
                         <th>id</th><!--switch ve id mutleq olmalidir cunki o data tablenin islemesi ucun lazimdi ve thead in icini siraliyanda databasein tablesinin sirasina uygun siralamaz lazimdi en axirda update delete olacaq onnan evvel eger varsa additional linkler ve onnan evvelde tabledki fieldler -->
-                        <th>Haqqında(az)</th>
-                        <th>Haqqında(en)</th>
-                        <th>Haqqında(ru)</th>
+                        <th>Əlaqə(az)</th>
+                        <th>Əlaqə(en)</th>
+                        <th>Əlaqə(ru)</th>
                         <th>Əməliyatlar</th>
                     </tr>
                 </tfoot>

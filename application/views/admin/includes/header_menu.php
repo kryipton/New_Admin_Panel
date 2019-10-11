@@ -23,9 +23,9 @@
     </li>
     <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_courses_secure_controller")?>">Kurslarmız</a></li>
     <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_partners_secure_controller")?>">Əməkdaşlarımız</a></li>
-    <li><a class="waves-effect" href="#!">Məzunlarımız</a></li>
+    <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_alumni_secure_controller")?>">Məzunlarımız</a></li>
     <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_teachers_secure_controller")?>">Müəllimlərimiz</a></li>
     <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_events_secure_controller")?>">Tədbirlər</a></li>
-    <li><a class="waves-effect" href="#!">Haqqımızda</a></li>
+    <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_about_secure_controller")?>">Haqqımızda</a></li>
     <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_contact_secure_controller")?>">Əlaqə</a></li>
 </ul>

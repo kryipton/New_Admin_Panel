@@ -2,6 +2,14 @@
 
 <!--tablede hansi rowlarin gorsenmesini isdemirsense o burda yazilir css in icinde yazma onda diger seyfelerdeki tableleride bagliyar :)-->
 <style>
+    .c_head th:nth-child(11){
+        display: none;
+    }
+
+    tbody tr td:nth-child(11){
+        display: none;
+    }
+
     .c_head th:nth-child(6){
         display: none;
     }
@@ -9,6 +17,7 @@
     tbody tr td:nth-child(6){
         display: none;
     }
+
     .c_head th:nth-child(7){
         display: none;
     }
@@ -23,32 +32,6 @@
     tbody tr td:nth-child(8){
         display: none;
     }
-
-    .c_head th:nth-child(12){
-        display: none;
-    }
-
-    tbody tr td:nth-child(12){
-        display: none;
-    }
-
-
-    .c_head th:nth-child(13){
-        display: none;
-    }
-
-    tbody tr td:nth-child(13){
-        display: none;
-    }
-
-    .c_head th:nth-child(14){
-        display: none;
-    }
-
-    tbody tr td:nth-child(14){
-        display: none;
-    }
-
 </style>
 <!--tablede hansi rowlarin gorsenmesini isdemirsense o burda yazilir css in icinde yazma onda diger seyfelerdeki tableleride bagliyar :)-->
 
@@ -90,14 +73,9 @@
                         <th>Haqqında(az)</th>
                         <th>Haqqında(en)</th>
                         <th>Haqqında(ru)</th>
+                        <th>Məzun olduqu il</th>
                         <th>Profil Şəkli</th>
-                        <th>Başlama Günü</th>
-                        <th>Max Tələbə sayı</th>
-                        <th>Dərsin Başlama saatı</th>
-                        <th>Dərsin Bitmə saatı</th>
-                        <th>Kursun toplam saatı</th>
-                        <th>Kursun toplam ayı</th>
-                        <th>Dərs deyəcek müəllimlər</th>
+                        <th>Course_id</th>
                         <th>Əməliyatlar</th>
                     </tr>
                 </thead>
@@ -114,14 +92,9 @@
                         <th>Haqqında(az)</th>
                         <th>Haqqında(en)</th>
                         <th>Haqqında(ru)</th>
+                        <th>Məzun olduqu il</th>
                         <th>Profil Şəkli</th>
-                        <th>Başlama Günü</th>
-                        <th>Max Tələbə sayı</th>
-                        <th>Dərsin Başlama saatı</th>
-                        <th>Dərsin Bitmə saatı</th>
-                        <th>Kursun toplam saatı</th>
-                        <th>Kursun toplam ayı</th>
-                        <th>Dərs deyəcek müəllimlər</th>
+                        <th>Course_id</th>
                         <th>Əməliyatlar</th>
                     </tr>
                 </tfoot>
