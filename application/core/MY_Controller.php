@@ -7,6 +7,10 @@ class MY_Controller extends CI_Controller{
     {
         parent::__construct();
         $this->load->model("Model_for_core");
+        if (empty($this->session->userdata("user"))){
+            redirect(base_url("panel_admin_page_secure_login_secure_controller"));
+        }
+
     }
 
 

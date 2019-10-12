@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9829536c-9241-4db4-81fe-378ae02d746d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_about.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_alumni.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_courses_teachers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/about/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/about/whole_page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/alumni/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/alumni/whole_page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/courses/course_teachers/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/courses/course_teachers/whole_page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_login_page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/admin/login/content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/admin/login/whole_page.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_courses.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_courses.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/contact/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/contact/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/courses/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/courses/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/events/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/events/content.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/includes/header_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/includes/header_menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/partners/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/partners/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/teachers/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/teachers/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/courses/avatar.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,72 +19,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_courses.php">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/login/content.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="143" column="25" selection-start-line="143" selection-start-column="25" selection-end-line="143" selection-end-column="25" />
-              <folding>
-                <element signature="n#__construct#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-                <element signature="e#5590#6256#0#PHP" />
-                <element signature="e#6290#6776#0#PHP" />
-                <element signature="n#index#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-                <element signature="n#get_data#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-                <element signature="e#8641#9192#0#PHP" />
-                <element signature="n#add#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-                <element signature="n#get_data_for_update#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-                <element signature="n#update#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-                <element signature="n#delete#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-                <marker date="1570825558229" expanded="true" signature="9826:10628" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="697" column="28" selection-start-line="697" selection-start-column="28" selection-end-line="697" selection-end-column="28" />
-              <folding>
-                <element signature="n#insert_db_img#0;n#MY_Controller#0;n#!!top" />
-                <element signature="n#insert_db#0;n#MY_Controller#0;n#!!top" />
-                <element signature="n#update_db_img#0;n#MY_Controller#0;n#!!top" />
-                <element signature="n#update_db#0;n#MY_Controller#0;n#!!top" />
-                <element signature="n#delete_db_img#0;n#MY_Controller#0;n#!!top" />
-                <element signature="n#delete_db#0;n#MY_Controller#0;n#!!top" />
-                <element signature="n#update_db_ajax#0;n#MY_Controller#0;n#!!top" />
-                <element signature="n#update_db_ajax_img#0;n#MY_Controller#0;n#!!top" />
-                <element signature="n#insert_db_ajax_img#0;n#MY_Controller#0;n#!!top" />
-                <element signature="n#data_table#0;n#MY_Controller#0;n#!!top" />
-                <element signature="n#data_table_2#0;n#MY_Controller#0;n#!!top" />
-                <element signature="n#data_table_2_array#0;n#MY_Controller#0;n#!!top" />
-                <element signature="n#update_view#0;n#MY_Controller#0;n#!!top" />
-                <element signature="n#create_view#0;n#MY_Controller#0;n#!!top" />
-                <element signature="e#37220#38270#0#PHP" />
-                <marker date="1570825428083" expanded="true" signature="34444:34547" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/courses/content.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-              <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
-              <folding>
-                <marker date="1570825476246" expanded="true" signature="509:533" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Model_for_core.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="622">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
             </state>
           </provider>
         </entry>
@@ -163,8 +88,6 @@
         <option value="$PROJECT_DIR$/application/views/admin/includes/header.php" />
         <option value="$PROJECT_DIR$/application/views/admin/courses/course_teachers/whole_page.php" />
         <option value="$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_courses_teachers.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/includes/header_menu.php" />
-        <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/application/views/admin/alumni/whole_page.php" />
         <option value="$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_alumni.php" />
         <option value="$PROJECT_DIR$/application/views/admin/alumni/content.php" />
@@ -177,16 +100,22 @@
         <option value="$PROJECT_DIR$/application/views/admin/partners/content.php" />
         <option value="$PROJECT_DIR$/application/models/Model_for_core.php" />
         <option value="$PROJECT_DIR$/application/views/admin/courses/course_teachers/content.php" />
-        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
         <option value="$PROJECT_DIR$/application/views/admin/courses/content.php" />
         <option value="$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_courses.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/login/whole_page.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/application/views/admin/includes/header_menu.php" />
+        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_login_page.php" />
+        <option value="$PROJECT_DIR$/application/config/routes.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/login/content.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="256" />
+    <option name="x" value="255" />
     <option name="y" value="80" />
-    <option name="width" value="1224" />
+    <option name="width" value="1225" />
     <option name="height" value="1150" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -228,7 +157,7 @@
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="courses" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -281,15 +210,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\New_Admin_Panel\application\views\admin\page1" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\New_Admin_Panel\application\views\admin" />
       <recent name="D:\xampp\htdocs\New_Admin_Panel\application\controllers" />
       <recent name="D:\xampp\htdocs\New_Admin_Panel\application\views\admin\courses\course_teachers" />
       <recent name="D:\xampp\htdocs\New_Admin_Panel\public\admin\css" />
       <recent name="D:\xampp\htdocs\New_Admin_Panel\public\admin\scripts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\New_Admin_Panel\application\views\admin\page1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -328,16 +257,17 @@
       <workItem from="1570622049251" duration="7513000" />
       <workItem from="1570686791636" duration="624000" />
       <workItem from="1570811065052" duration="14573000" />
+      <workItem from="1570860075942" duration="3633000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123108000" />
+    <option name="totallyTimeSpent" value="126741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16308725" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.252349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -383,18 +313,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/admin/scripts/sweetalert.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/css/iziToast.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/scripts/iziToast.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/bootstrap/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/admin/bootstrap/css/bootstrap-responsive.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -456,13 +374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -578,24 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="54" selection-end-column="10" />
-          <folding>
-            <element signature="n#__construct#0;n#Welcome#0;n#!!top" />
-            <element signature="e#396#608#0#PHP" />
-            <element signature="e#637#768#0#PHP" />
-            <element signature="e#1685#1985#0#PHP" />
-            <element signature="e#2015#2254#0#PHP" />
-            <element signature="e#4685#4976#0#PHP" />
-            <element signature="n#get_data_for_update#0;n#Welcome#0;n#!!top" />
-            <element signature="n#update#0;n#Welcome#0;n#!!top" />
-            <element signature="n#delete#0;n#Welcome#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/admin/scripts/custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
@@ -655,13 +548,6 @@
             <element signature="n#update#0;n#Panel_admin_page_secure_teachers#0;n#!!top" />
             <element signature="n#delete#0;n#Panel_admin_page_secure_teachers#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/includes/header_menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="25" column="89" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="89" />
         </state>
       </provider>
     </entry>
@@ -756,13 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="132" column="93" lean-forward="true" selection-start-line="132" selection-start-column="93" selection-end-line="132" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/events/content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -798,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Model_for_core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/courses/course_teachers/content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -812,11 +684,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/courses/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+          <folding>
+            <marker date="1570825476246" expanded="true" signature="509:533" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="54" selection-end-column="10" />
+          <folding>
+            <element signature="n#__construct#0;n#Welcome#0;n#!!top" />
+            <element signature="e#396#608#0#PHP" />
+            <element signature="e#637#768#0#PHP" />
+            <element signature="e#1685#1985#0#PHP" />
+            <element signature="e#2015#2254#0#PHP" />
+            <element signature="e#4685#4976#0#PHP" />
+            <element signature="n#get_data_for_update#0;n#Welcome#0;n#!!top" />
+            <element signature="n#update#0;n#Welcome#0;n#!!top" />
+            <element signature="n#delete#0;n#Welcome#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_courses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="n#__construct#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
+            <element signature="e#5590#6256#0#PHP" />
+            <element signature="e#6290#6776#0#PHP" />
+            <element signature="n#index#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
+            <element signature="n#get_data#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
+            <element signature="n#add#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
+            <element signature="n#get_data_for_update#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
+            <element signature="n#update#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
+            <element signature="n#delete#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
+            <marker date="1570825558229" expanded="true" signature="9826:10628" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/login/whole_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/includes/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/includes/header_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="114" selection-start-line="30" selection-start-column="114" selection-end-line="30" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Model_for_core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="n#core_get#0;n#Model_for_core#0;n#!!top" />
+            <element signature="n#core_get_where_result#0;n#Model_for_core#0;n#!!top" />
+            <element signature="n#core_add#0;n#Model_for_core#0;n#!!top" />
+            <element signature="n#core_update#0;n#Model_for_core#0;n#!!top" />
+            <element signature="n#core_delete#0;n#Model_for_core#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_login_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding>
+            <element signature="n#__construct#0;n#Panel_admin_page_secure_login_page#0;n#!!top" />
+            <element signature="n#index#0;n#Panel_admin_page_secure_login_page#0;n#!!top" />
+            <element signature="n#login#0;n#Panel_admin_page_secure_login_page#0;n#!!top" />
+            <element signature="e#685#1604#0#PHP" />
+            <element signature="e#741#940#0#PHP" />
+            <element signature="e#800#914#0#PHP" />
+            <element signature="e#1432#1604#0#PHP" />
+            <element signature="e#1360#1399#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="697" column="28" selection-start-line="697" selection-start-column="28" selection-end-line="697" selection-end-column="28" />
+        <state relative-caret-position="61">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
           <folding>
+            <element signature="n#__construct#0;n#MY_Controller#0;n#!!top" />
             <element signature="n#insert_db_img#0;n#MY_Controller#0;n#!!top" />
             <element signature="n#insert_db#0;n#MY_Controller#0;n#!!top" />
             <element signature="n#update_db_img#0;n#MY_Controller#0;n#!!top" />
@@ -831,40 +811,28 @@
             <element signature="n#data_table_2_array#0;n#MY_Controller#0;n#!!top" />
             <element signature="n#update_view#0;n#MY_Controller#0;n#!!top" />
             <element signature="n#create_view#0;n#MY_Controller#0;n#!!top" />
-            <element signature="e#37220#38270#0#PHP" />
-            <marker date="1570825428083" expanded="true" signature="34444:34547" ph="..." />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1570863023091" expanded="true" signature="34592:34695" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/courses/content.php">
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
-          <folding>
-            <marker date="1570825476246" expanded="true" signature="509:533" ph="..." />
-          </folding>
+        <state relative-caret-position="438">
+          <caret line="66" column="57" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Panel_admin_page_secure_courses.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/login/content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="143" column="25" selection-start-line="143" selection-start-column="25" selection-end-line="143" selection-end-column="25" />
-          <folding>
-            <element signature="n#__construct#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-            <element signature="e#5590#6256#0#PHP" />
-            <element signature="e#6290#6776#0#PHP" />
-            <element signature="n#index#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-            <element signature="n#get_data#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-            <element signature="e#8641#9192#0#PHP" />
-            <element signature="n#add#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-            <element signature="n#get_data_for_update#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-            <element signature="n#update#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-            <element signature="n#delete#0;n#Panel_admin_page_secure_courses#0;n#!!top" />
-            <marker date="1570825558229" expanded="true" signature="9826:10628" ph="..." />
-          </folding>
+        <state relative-caret-position="622">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
         </state>
       </provider>
     </entry>

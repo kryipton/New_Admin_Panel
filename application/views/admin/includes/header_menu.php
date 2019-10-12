@@ -28,4 +28,6 @@
     <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_events_secure_controller")?>">Tədbirlər</a></li>
     <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_about_secure_controller")?>">Haqqımızda</a></li>
     <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_contact_secure_controller")?>">Əlaqə</a></li>
+    <li><a class="waves-effect" href="<?php echo base_url("panel_admin_page_secure_logout_secure_controller_action")?>">Çıxış</a></li>
+
 </ul>
