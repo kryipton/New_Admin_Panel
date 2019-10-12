@@ -2,52 +2,44 @@
 
 <!--tablede hansi rowlarin gorsenmesini isdemirsense o burda yazilir css in icinde yazma onda diger seyfelerdeki tableleride bagliyar :)-->
 <style>
-    .c_head th:nth-child(6){
-        display: none;
-    }
-
-    tbody tr td:nth-child(6){
-        display: none;
-    }
-    .c_head th:nth-child(7){
-        display: none;
-    }
-
-    tbody tr td:nth-child(7){
-        display: none;
-    }
-    .c_head th:nth-child(8){
-        display: none;
-    }
-
-    tbody tr td:nth-child(8){
-        display: none;
-    }
-
-    .c_head th:nth-child(12){
-        display: none;
-    }
-
-    tbody tr td:nth-child(12){
+    .c_head th:nth-child(1){
         display: none;
     }
 
 
-    .c_head th:nth-child(13){
+    tbody tr td:nth-child(1){
         display: none;
     }
 
-    tbody tr td:nth-child(13){
+    .c_head th:nth-child(2){
         display: none;
     }
 
-    .c_head th:nth-child(14){
+    tbody tr td:nth-child(2){
         display: none;
     }
 
-    tbody tr td:nth-child(14){
+    .c_row_delete{
         display: none;
     }
+
+    .dataTables_filter{
+        display: none!important;
+    }
+
+    .select-wrapper{
+        margin: 0 auto;
+    }
+
+    .dataTables_paginate{
+        display: none;
+    }
+
+    .dataTables_length{
+        display: none;
+    }
+
+
 
 </style>
 <!--tablede hansi rowlarin gorsenmesini isdemirsense o burda yazilir css in icinde yazma onda diger seyfelerdeki tableleride bagliyar :)-->
@@ -59,9 +51,9 @@
 
 
 <!--        yeni melumat yaratma butonu bunun icindeki kodalri deyismeye ehtiyac yoxdu-->
-        <br>
-        <a style="float: right;background-color: #29a599!important;" onclick="document.querySelector('.dialog2').classList.add('open')" class="с_сreate btn-floating btn waves-effect waves-light red"><i style="font-size: 15px" class="fas fa-plus"></i></a>
-        <br>
+<!--        <br>-->
+<!--        <a style="float: right;background-color: #29a599!important;" onclick="document.querySelector('.dialog2').classList.add('open')" class="с_сreate btn-floating btn waves-effect waves-light red"><i style="font-size: 15px" class="fas fa-plus"></i></a>-->
+<!--        <br>-->
 <!--        yeni melumat yaratma butonu bunun icindeki kodalri deyismeye ehtiyac yoxdu-->
 
 
@@ -84,20 +76,9 @@
                             <a class="red lighten-1 btn btn-danger mr-1 c_delete_all"><i style="font-size: 13px;" class="fas fa-trash"></i></a>
                         </th><!--switch ve id mutleq olmalidir cunki o data tablenin islemesi ucun lazimdi ve thead in icini siraliyanda databasein tablesinin sirasina uygun siralamaz lazimdi en axirda update delete olacaq onnan evvel eger varsa additional linkler ve onnan evvelde tabledki fieldler-->
                         <th>id</th><!--switch ve id mutleq olmalidir cunki o data tablenin islemesi ucun lazimdi ve thead in icini siraliyanda databasein tablesinin sirasina uygun siralamaz lazimdi en axirda update delete olacaq onnan evvel eger varsa additional linkler ve onnan evvelde tabledki fieldler -->
-                        <th>Adı(az)</th>
-                        <th>Adı(en)</th>
-                        <th>Adı(ru)</th>
-                        <th>Haqqında(az)</th>
-                        <th>Haqqında(en)</th>
-                        <th>Haqqında(ru)</th>
-                        <th>Profil Şəkli</th>
-                        <th>Başlama Günü</th>
-                        <th>Max Tələbə sayı</th>
-                        <th>Dərsin Başlama saatı</th>
-                        <th>Dərsin Bitmə saatı</th>
-                        <th>Kursun toplam saatı</th>
-                        <th>Kursun toplam ayı</th>
-                        <th>Dərs deyəcek müəllimlər</th>
+                        <th>Haqqımızda(az)</th>
+                        <th>Haqqımızda(en)</th>
+                        <th>Haqqımızda(ru)</th>
                         <th>Əməliyatlar</th>
                     </tr>
                 </thead>
@@ -108,20 +89,9 @@
                     <tr class="c_head">
                         <th class="c_switch">switch</th>
                         <th>id</th><!--switch ve id mutleq olmalidir cunki o data tablenin islemesi ucun lazimdi ve thead in icini siraliyanda databasein tablesinin sirasina uygun siralamaz lazimdi en axirda update delete olacaq onnan evvel eger varsa additional linkler ve onnan evvelde tabledki fieldler -->
-                        <th>Adı(az)</th>
-                        <th>Adı(en)</th>
-                        <th>Adı(ru)</th>
-                        <th>Haqqında(az)</th>
-                        <th>Haqqında(en)</th>
-                        <th>Haqqında(ru)</th>
-                        <th>Profil Şəkli</th>
-                        <th>Başlama Günü</th>
-                        <th>Max Tələbə sayı</th>
-                        <th>Dərsin Başlama saatı</th>
-                        <th>Dərsin Bitmə saatı</th>
-                        <th>Kursun toplam saatı</th>
-                        <th>Kursun toplam ayı</th>
-                        <th>Dərs deyəcek müəllimlər</th>
+                        <th>Haqqımızda(az)</th>
+                        <th>Haqqımızda(en)</th>
+                        <th>Haqqımızda(ru)</th>
                         <th>Əməliyatlar</th>
                     </tr>
                 </tfoot>

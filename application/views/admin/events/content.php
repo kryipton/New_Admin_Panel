@@ -2,27 +2,27 @@
 
 <!--tablede hansi rowlarin gorsenmesini isdemirsense o burda yazilir css in icinde yazma onda diger seyfelerdeki tableleride bagliyar :)-->
 <style>
-    /*.c_head th:nth-child(6){*/
-        /*display: none;*/
-    /*}*/
+    .c_head th:nth-child(6){
+        display: none;
+    }
 
-    /*tbody tr td:nth-child(6){*/
-        /*display: none;*/
-    /*}*/
-    /*.c_head th:nth-child(7){*/
-        /*display: none;*/
-    /*}*/
+    tbody tr td:nth-child(6){
+        display: none;
+    }
+    .c_head th:nth-child(7){
+        display: none;
+    }
 
-    /*tbody tr td:nth-child(7){*/
-        /*display: none;*/
-    /*}*/
-    /*.c_head th:nth-child(8){*/
-        /*display: none;*/
-    /*}*/
+    tbody tr td:nth-child(7){
+        display: none;
+    }
+    .c_head th:nth-child(8){
+        display: none;
+    }
 
-    /*tbody tr td:nth-child(8){*/
-        /*display: none;*/
-    /*}*/
+    tbody tr td:nth-child(8){
+        display: none;
+    }
 </style>
 <!--tablede hansi rowlarin gorsenmesini isdemirsense o burda yazilir css in icinde yazma onda diger seyfelerdeki tableleride bagliyar :)-->
 

@@ -7,6 +7,10 @@ class MY_Controller extends CI_Controller{
     {
         parent::__construct();
         $this->load->model("Model_for_core");
+        if (empty($this->session->userdata("user"))){
+            redirect(base_url("panel_admin_page_secure_login_secure_controller"));
+        }
+
     }
 
 
@@ -565,6 +569,7 @@ class MY_Controller extends CI_Controller{
 
     public function data_table($valid_columns, $additional_links, $table_name, $upload_path, $get_data_for_update_modal_link, $row_delete_link)
     {
+
         $draw = intval($this->input->post("draw"));
         $start = intval($this->input->post("start"));
         $length = intval($this->input->post("length"));
@@ -668,13 +673,14 @@ class MY_Controller extends CI_Controller{
 //        menim duzeltdiyim kodlar
 
 
+
         $total_employees = $this->data_table_2($table_name);
         $output = array(
-            "draw" => $draw,
-            "recordsTotal" => $total_employees,
-            "recordsFiltered" => $total_employees,
-            "data" => $data,
-        );
+                "draw" => $draw,
+                "recordsTotal" => $total_employees,
+                "recordsFiltered" => $total_employees,
+                "data" => $data,
+            );
 
         echo json_encode($output);
         exit();
@@ -688,6 +694,137 @@ class MY_Controller extends CI_Controller{
         return 0;
     }
 
+    public function data_table_array($id,$id_array, $valid_columns, $additional_links, $table_name, $upload_path, $get_data_for_update_modal_link, $row_delete_link)
+    {
+
+        if (empty($id_array))
+        {
+            $id_array[] = -1;
+        }
+
+        $draw = intval($this->input->post("draw"));
+        $start = intval($this->input->post("start"));
+        $length = intval($this->input->post("length"));
+        $order = $this->input->post("order");
+        $search= $this->input->post("search");
+        $search = $search['value'];
+        $col = 0;
+        $dir = "";
+
+
+
+        if(!empty($order))
+        {
+            foreach($order as $o)
+            {
+                $col = $o['column'];
+                $dir= $o['dir'];
+            }
+        }
+
+        if($dir != "asc" && $dir != "desc")
+        {
+            $dir = "desc";
+        }
+
+
+        if(!isset($valid_columns[$col]))
+        {
+            $order = null;
+        }
+        else
+        {
+            if ($col >= 1){
+                $order = $valid_columns[$col - 1];
+            }else{
+                $order = $valid_columns[$col];
+            }
+
+        }
+        if($order !=null)
+        {
+            $this->db->where_in($id, $id_array);
+            $this->db->order_by($order, $dir);
+        }
+
+        if(!empty($search))
+        {
+            $x=0;
+            foreach($valid_columns as $sterm)
+            {
+                if($x==0)
+                {
+                    $this->db->like($sterm,$search);
+                }
+                else
+                {
+                    $this->db->or_like($sterm,$search);
+                }
+                $x++;
+            }
+        }
+        $this->db->limit($length,$start);
+        $employees = $this->db->get($table_name);
+        $data = array();
+
+//        menim duzeltdiyim kodlar
+        foreach ($employees->result_array() as $key => $item) {
+            $item = array_values($item);
+            array_unshift($item , '<label><input type="checkbox" class="c_checkbox" id="'. $item[0] .'"/><span></span></label>');
+            $count = 0;
+            foreach ($item as $k=>$v){
+                if (substr($v, -4) == ".jpg" || substr($v, -4) == ".png" || substr($v, -4) == ".jpeg"){
+                    $item[$k] = '<img class="materialboxed" width="100px" height ="100px" style="display: initial; object-fit:contain; height:100px!important; width:100px!important" src="' . base_url($upload_path) . $v .'" alt="Sekil">';
+                }else{
+                    if (strlen($v) > 15  && $count != 0){
+                        $v = substr($v, 0, 15) . "...";
+                    }
+                    if ($count != 1){
+                        $item[$k] = '<span class="c_update_link" >' . $v . '</span>';
+                    }else{
+                        $item[$k] = '<span class="c_update_link c_id" >' . $v . '</span>';
+                    }
+
+                }
+                $count++;
+            }
+
+            $data[] = $item;
+        }
+
+        foreach ($data as $element => $val) {
+
+            foreach ($additional_links as $name => $link){
+                $val[] = '<a data-href="'. $link .'" href="'. $link .'" class="btn btn-primary c_other_link">'. $name .'</a>';
+                $data[$element] = $val;
+            }
+
+            $val[] = '<a class="btn btn-primary mr-1 c_row_update " data-updatelink = "' . $get_data_for_update_modal_link . '" onclick="document.querySelector(\'.dialog\').classList.add(\'open\')" ><i class="fas fa-wrench" style="font-size: 15px"></i></a> <a  data-deletelinkold = "' . $row_delete_link . '" data-deletelink = "' . $row_delete_link . '" class="red lighten-1 btn btn-danger mr-1 c_row_delete"><i style="font-size: 15px;" class="fas fa-trash"></i></a>';
+            $data[$element] = $val;
+
+        }
+//        menim duzeltdiyim kodlar
+
+
+        $total_employees = $this->data_table_2_array($id, $id_array , $table_name);
+        $output = array(
+            "draw" => $draw,
+            "recordsTotal" => $total_employees,
+            "recordsFiltered" => $total_employees,
+            "data" => $data,
+        );
+
+        echo json_encode($output);
+        exit();
+    }
+
+    public function data_table_2_array($id, $id_array, $table_name)
+    {
+        $query = $this->db->where_in($id, $id_array)->select("COUNT(*) as num")->get($table_name);
+        $result = $query->row();
+        if(isset($result)) return $result->num;
+        return 0;
+    }
 //======================================== Dinamik Data table kodlari ===================================================
 
 
@@ -722,7 +859,7 @@ class MY_Controller extends CI_Controller{
                                 <div class="file-path-wrapper">
                                   <input class="file-path validate" type="text">
                                 </div>
-                              </div>';
+                              </div><br><br>';
                 }
 //                $html .= '<label for="' . $value . '" style="color: white!important;">' . $key .
 //                    '</label><input '. $input_value . ' ' . $required . ' id="' . $value . '" name="'. $value . '" class="form-control c_form_control" type="' . $input_name_type[$value]. '"><br><br>';
@@ -789,7 +926,7 @@ class MY_Controller extends CI_Controller{
                                       <div class="file-path-wrapper">
                                         <input class="file-path validate" type="text">
                                       </div>
-                                    </div>';
+                                    </div><br><br>';
                 }else{
                     $required="required";
                     $second_part .= '<label for="' . $value . '" style="color: black!important;">' . $key .
