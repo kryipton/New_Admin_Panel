@@ -146,3 +146,33 @@ $route["panel_admin_page_secure_about_secure_controller_delete/(.*)"] = "Panel_a
 //haqqimizda hissesi
 
 //=====Admin panel
+
+
+
+
+
+
+
+
+
+//===================================================== FRONT HISSE ==============================================================
+//Ana sehife
+$route["(:any)/Home"] = "HomeWebPageController/index/";
+
+
+
+//Haqqimizda
+$route["(:any)/About"] = "AboutWebPageController/index/";
+
+
+
+
+
+
+
+
+
+
+
+
+//===================================================== FRONT HISSE ==============================================================
