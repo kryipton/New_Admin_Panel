@@ -1,28 +1,8 @@
 <!--*Footer*-->
-<footer id="mt_footer">
+<footer style="padding-top: 77px;" id="mt_footer">
     <div class="container">
 
-        <section id="newsletter">
-            <div class="newsletter-inner">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="news-content">
-                            <h2>Like to become an instructor?</h2>
-                            <p class="mar-0">Join thousand of instructors and earn money hassle free! Lorem ipsums dolors sit amet consectetur adipiselo elit sed do eiuse.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="mailpoet_form">
-                            <form target="_self" method="post" action="https://cyclonethemes.com/demo/html/padhai/email" novalidate="">
-                                <input type="email" class="mailpoet_text" name="mail" title="Email" placeholder="Please specify a valid email address.">
 
-                                <div class="button"><input type="submit" class="mailpoet_submit" value="Subscribe!"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <div class="footer-main">
             <div class="row">
@@ -102,7 +82,7 @@
             </div>
         </div>
     </div>
-    <div class="mt_footer_copy">
+    <div class="mt_footer_copy" >
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
@@ -133,43 +113,43 @@
 
 <!--*Scripts*-->
 
-<!-- Latest jquery --><script href="<?php echo base_url("public/front/")?>js/jquery-3.2.1.min.js"></script>
+<!-- Latest jquery --><script src="<?php echo base_url("public/front/")?>js/jquery-3.2.1.min.js"></script>
 
-<!-- latest Bootstrap --><script href="<?php echo base_url("public/front/")?>js/bootstrap.min.js"></script>
+<!-- latest Bootstrap --><script src="<?php echo base_url("public/front/")?>js/bootstrap.min.js"></script>
 
-<!-- Parallax jquery --><script href="<?php echo base_url("public/front/")?>js/jquery.parallax-1.1.3.js"></script>
+<!-- Parallax jquery --><script src="<?php echo base_url("public/front/")?>js/jquery.parallax-1.1.3.js"></script>
 
-<!-- Fancybox jquery --><script href="<?php echo base_url("public/front/")?>js/jquery.fancybox.pack.js"></script>
+<!-- Fancybox jquery --><script src="<?php echo base_url("public/front/")?>js/jquery.fancybox.pack.js"></script>
 
-<!-- Easing Jquery --><script href="<?php echo base_url("public/front/")?>js/jquery.easing.min.js"></script>
+<!-- Easing Jquery --><script src="<?php echo base_url("public/front/")?>js/jquery.easing.min.js"></script>
 
-<!-- wow animated jquery --><script href="<?php echo base_url("public/front/")?>js/wow.min.js"></script>
+<!-- wow animated jquery --><script src="<?php echo base_url("public/front/")?>js/wow.min.js"></script>
 
-<!-- Navigation jquery --><script href="<?php echo base_url("public/front/")?>js/jquery.nav.js"></script>
+<!-- Navigation jquery --><script src="<?php echo base_url("public/front/")?>js/jquery.nav.js"></script>
 
-<!-- Magnific Popup JS --><script href="<?php echo base_url("public/front/")?>js/jquery.magnific-popup.min.js"></script>
+<!-- Magnific Popup JS --><script src="<?php echo base_url("public/front/")?>js/jquery.magnific-popup.min.js"></script>
 
-<!-- custom image popup Jquery --><script href="<?php echo base_url("public/front/")?>js/custom-magnificpopup.js"></script>
+<!-- custom image popup Jquery --><script src="<?php echo base_url("public/front/")?>js/custom-magnificpopup.js"></script>
 
-<!-- Slick jquery --><script href="<?php echo base_url("public/front/")?>js/slick.js"></script>
+<!-- Slick jquery --><script src="<?php echo base_url("public/front/")?>js/slick.js"></script>
 
-<!-- Slicknav jquery --><script href="<?php echo base_url("public/front/")?>js/slicknav.js"></script>
+<!-- Slicknav jquery --><script src="<?php echo base_url("public/front/")?>js/slicknav.js"></script>
 
-<!-- custom nav jquery --><script href="<?php echo base_url("public/front/")?>js/custom-nav.js"></script>
+<!-- custom nav jquery --><script src="<?php echo base_url("public/front/")?>js/custom-nav.js"></script>
 
-<!-- Owl Carousel Jquery --><script href="<?php echo base_url("public/front/")?>js/owl.carousel.min.js"></script>
+<!-- Owl Carousel Jquery --><script src="<?php echo base_url("public/front/")?>js/owl.carousel.min.js"></script>
 
-<!-- Appear Jquery --><script href="<?php echo base_url("public/front/")?>js/jquery.appear.js"></script>
+<!-- Appear Jquery --><script src="<?php echo base_url("public/front/")?>js/jquery.appear.js"></script>
 
-<!-- isotope Jquery --><script href="<?php echo base_url("public/front/")?>js/isotope.min.js"></script>
+<!-- isotope Jquery --><script src="<?php echo base_url("public/front/")?>js/isotope.min.js"></script>
 
-<!-- CountTo Jquery --><script href="<?php echo base_url("public/front/")?>js/jquery.countTo.js"></script>
+<!-- CountTo Jquery --><script src="<?php echo base_url("public/front/")?>js/jquery.countTo.js"></script>
 
-<!-- Popup video Jquery --><script href="<?php echo base_url("public/front/")?>js/jquery-modal-video.min.js"></script>
+<!-- Popup video Jquery --><script src="<?php echo base_url("public/front/")?>js/jquery-modal-video.min.js"></script>
 
-<!-- custom Popup video Jquery --><script href="<?php echo base_url("public/front/")?>js/custom-modalvideo.js"></script>
+<!-- custom Popup video Jquery --><script src="<?php echo base_url("public/front/")?>js/custom-modalvideo.js"></script>
 
-<!-- main default Jquery --><script href="<?php echo base_url("public/front/")?>js/main.js"></script>
+<!-- main default Jquery --><script src="<?php echo base_url("public/front/")?>js/main.js"></script>
 </body>
 
 

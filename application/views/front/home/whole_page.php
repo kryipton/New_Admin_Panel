@@ -15,7 +15,7 @@
         <!-- First Slide -->
         <div class="item active">
             <!-- Slide Background -->
-            <img href="<?php echo base_url("public/front/")?>images/education/slide-1.jpg" alt="slider_01" />
+            <img src="<?php echo base_url("public/front/")?>images/education/slide-1.jpg" alt="slider_01" />
             <!-- Left Slide Text Layer -->
             <div class="caption_slide1 fadeInRight" data-animation="animated fadeInRight">
                 <h3>Welcome To Padhai</h3>
@@ -29,7 +29,7 @@
         <!-- Second Slide -->
         <div class="item">
             <!-- Slide Background -->
-            <img href="<?php echo base_url("public/front/")?>images/education/slide-2.jpg" alt="slider_02" />
+            <img src="<?php echo base_url("public/front/")?>images/education/slide-2.jpg" alt="slider_02" />
             <!-- Right Slide Text Layer -->
             <div class="caption_slide1 caption_slide1_right wow fadeInLeft" data-animation="animated fadeInLeft">
                 <h3>Welcome To Padhai</h3>
@@ -43,7 +43,7 @@
         <!-- Third Slide -->
         <div class="item">
             <!-- Slide Background -->
-            <img href="<?php echo base_url("public/front/")?>images/education/slide-4.jpg" alt="slider_04" />
+            <img src="<?php echo base_url("public/front/")?>images/education/slide-4.jpg" alt="slider_04" />
             <!-- Center Slide Text Layer -->
             <div class="caption_slide1 caption_slide1_center cap-new wow fadeInDown" data-animation="animated fadeInDown">
                 <h3>Welcome To Padhai</h3>
@@ -131,7 +131,7 @@
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="about-edu-bg">
-                        <img href="<?php echo base_url("public/front/")?>images/education/about.png" alt="About">
+                        <img src="<?php echo base_url("public/front/")?>images/education/about.png" alt="About">
                     </div>
 
                 </div>
@@ -516,7 +516,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <div class="event-left">
-                    <img href="<?php echo base_url("public/front/")?>images/places/01.jpg" alt="">
+                    <img src="<?php echo base_url("public/front/")?>images/places/01.jpg" alt="">
                     <div class="event-donation">
                         <h2>Donation helps us</h2>
                         <p>The Campaign for the Padhai University is the <strong>largest fundraising campaign in history</strong>. With a historic $1 billion goal, the campaign is expanding U of T’s global leadership capacity.World Largest books and library center is here where you can study the latest trends of the education</p>
