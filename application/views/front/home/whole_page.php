@@ -1,4 +1,4 @@
-<?php $this->load->view("front/includes/header")?>
+<?php $this->load->view("front/includes/header_home")?>
 
 
 
@@ -122,11 +122,19 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="about-items">
                         <div class="inner-heading">
-                            <h3>About Padhai</h3>
-                            <h2 class="mar-0">Know more about Padhai</h2>
+                            <h3><?php echo $this->lang->line("haqqimizda"); ?></h3>
                         </div>
-                        <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh  id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris. <br><br>Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris.
-                        </p>
+                        <?php
+
+                        if ($this->session->userdata("dil") == "az"){
+                            echo $about["desc_az"];
+                        }elseif ($this->session->userdata("dil") == "en"){
+                            echo $about["desc_en"];
+                        }elseif ($this->session->userdata("dil") == "ru"){
+                            echo $about["desc_ru"];
+                        }
+
+                        ?>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
@@ -134,24 +142,6 @@
                         <img src="<?php echo base_url("public/front/")?>images/education/about.png" alt="About">
                     </div>
 
-                </div>
-                <div class="col-xs-12">
-                    <div class="about-form">
-                        <div class="col-sm-9">
-                            <div class="about-sch-form">
-                                <div class="event-title">
-                                    <h2>Apply for Scholarship</h2>
-                                    <h3 class="white">Fall 2019 applications are now open</h3>
-                                    <p>We don’t just give students an education and experiences that set them up for success in a career. We help them succeed in their career—to discover a field they’re passionate about and dare to lead it.</p>
-                                </div> <!-- event title -->
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="smt-items mar-top-70">
-                                <a class="mt_btn_yellow" href="#">Apply Here</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -261,9 +251,9 @@
             <div class="col-md-4 col-sm-6 col-xs-12 item">
                 <div class="featured-item">
                     <div class="feat-img">
-                        <img href="<?php echo base_url("public/front/")?>images/education/ft-1.jpg" alt="">
+                        <img src="<?php echo base_url("public/front/")?>images/education/ft-1.jpg" alt="">
                         <div class="th-name">
-                            <img href="<?php echo base_url("public/front/")?>images/blog/cmnt-1.jpg" alt="">
+                            <img src="<?php echo base_url("public/front/")?>images/blog/cmnt-1.jpg" alt="">
                             <h5>Mark Ronson</h5>
                         </div>
                         <div class="overlayPort">
@@ -301,9 +291,9 @@
             <div class="col-md-4 col-sm-6 col-xs-12 item">
                 <div class="featured-item">
                     <div class="feat-img">
-                        <img href="<?php echo base_url("public/front/")?>images/education/ft-2.jpg" alt="">
+                        <img src="<?php echo base_url("public/front/")?>images/education/ft-2.jpg" alt="">
                         <div class="th-name">
-                            <img href="<?php echo base_url("public/front/")?>images/blog/cmnt-2.jpg" alt="">
+                            <img src="<?php echo base_url("public/front/")?>images/blog/cmnt-2.jpg" alt="">
                             <h5>Mark Ronson</h5>
                         </div>
                         <div class="overlayPort">
@@ -341,9 +331,9 @@
             <div class="col-md-4 col-sm-6 col-xs-12 item">
                 <div class="featured-item">
                     <div class="feat-img">
-                        <img href="<?php echo base_url("public/front/")?>images/education/ft-3.jpg" alt="">
+                        <img src="<?php echo base_url("public/front/")?>images/education/ft-3.jpg" alt="">
                         <div class="th-name">
-                            <img href="<?php echo base_url("public/front/")?>images/blog/cmnt-3.jpg" alt="">
+                            <img src="<?php echo base_url("public/front/")?>images/blog/cmnt-3.jpg" alt="">
                             <h5>Mark Ronson</h5>
                         </div>
                         <div class="overlayPort">
@@ -381,9 +371,9 @@
             <div class="col-md-4 col-sm-6 col-xs-12 item">
                 <div class="featured-item">
                     <div class="feat-img">
-                        <img href="<?php echo base_url("public/front/")?>images/education/ft-4.jpg" alt="">
+                        <img src="<?php echo base_url("public/front/")?>images/education/ft-4.jpg" alt="">
                         <div class="th-name">
-                            <img href="<?php echo base_url("public/front/")?>images/blog/cmnt-1.jpg" alt="">
+                            <img src="<?php echo base_url("public/front/")?>images/blog/cmnt-1.jpg" alt="">
                             <h5>Mark Ronson</h5>
                         </div>
                         <div class="overlayPort">
@@ -421,9 +411,9 @@
             <div class="col-md-4 col-sm-6 col-xs-12 item">
                 <div class="featured-item">
                     <div class="feat-img">
-                        <img href="<?php echo base_url("public/front/")?>images/education/ft-1.jpg" alt="">
+                        <img src="<?php echo base_url("public/front/")?>images/education/ft-1.jpg" alt="">
                         <div class="th-name">
-                            <img href="<?php echo base_url("public/front/")?>images/blog/cmnt-1.jpg" alt="">
+                            <img src="<?php echo base_url("public/front/")?>images/blog/cmnt-1.jpg" alt="">
                             <h5>Mark Ronson</h5>
                         </div>
                         <div class="overlayPort">
@@ -510,86 +500,82 @@
     <div class="container">
         <!-- section title -->
         <div class="inner-heading">
-            <h3>Upcomming Events</h3>
-            <h2>Reserve your seats now</h2>
+            <h3><?php echo $this->lang->line("gelecek_tedbirler"); ?></h3>
         </div>
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <div class="event-left">
-                    <img src="<?php echo base_url("public/front/")?>images/places/01.jpg" alt="">
-                    <div class="event-donation">
-                        <h2>Donation helps us</h2>
-                        <p>The Campaign for the Padhai University is the <strong>largest fundraising campaign in history</strong>. With a historic $1 billion goal, the campaign is expanding U of T’s global leadership capacity.World Largest books and library center is here where you can study the latest trends of the education</p>
-                        <a href="#" class="mt_btn_yellow">Become a Donor</a>
-                    </div>
+                    <img src="https://pbs.twimg.com/profile_images/656255050184945664/zLPbe1Bj_400x400.png" style="width: 500px" alt="">
                 </div>
             </div>
             <div class="col-md-6 col-sm-12">
                 <div class="event-main">
-                    <h2>Upcoming Events</h2>
+                    <h2><?php echo $this->lang->line("gelecek_tedbirler"); ?></h2>
+                    <?php  $i =0;
+                    foreach ($events as $event){ if ($i++ > 3) { break ;}
+                    ?>
                     <div class="event-item">
                         <div class="event-date text-center text-uppercase">
-                            <h4 class="mar-0">10 <span>Jan</span></h4>
+                            <h4 class="mar-0"><span> <i class="fa fa-arrow-right"></i></span></h4>
                         </div>
                         <div class="event-details">
-                            <h3 class="mar-bottom-10"><a href="#">Reunion Event : Padhai’s Alumni Golf Tour</a></h3>
-                            <ul class="event-time">
-                                <li><i class="fa fa-clock-o"></i>11:00 AM - 3:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i>Royal National Park, Sydney</li>
-                            </ul>
+                            <h3 class="mar-bottom-10">
+                                <a href="<?php
+
+                                if ($this->session->userdata("dil") == "az"){
+                                    echo base_url("az/Event_single/").$event['id'];
+                                }
+                                elseif ($this->session->userdata("dil") == "en"){
+                                    echo base_url("en/Event_single/").$event['id'];
+                                }
+                                elseif ($this->session->userdata("dil") == "ru"){
+                                    echo base_url("ru/Event_single/").$event['id'];
+                                }
+
+
+
+                                ?>">
+
+                                    <?php
+
+                                    if ($this->session->userdata("dil") == "az"){
+                                        echo strlen($event["name_az"]) < 45 ? $event["name_az"]  : substr($event["name_az"], 0,45).'...' ;
+                                    }elseif ($this->session->userdata("dil") == "en"){
+                                        echo strlen($event["name_en"]) < 45 ? $event["name_en"]  : substr($event["name_en"], 0,45).'...' ;
+                                    }elseif ($this->session->userdata("dil") == "ru"){
+                                        echo strlen($event["name_ru"]) < 45 ? $event["name_ru"]  : substr($event["name_ru"], 0,45).'...' ;
+                                    }
+
+                                    ?>
+                                </a>
+                            </h3>
                         </div>
                     </div>
 
-                    <div class="event-item">
-                        <div class="event-date text-center text-uppercase">
-                            <h4 class="mar-0">14 <span>Feb</span></h4>
-                        </div>
-                        <div class="event-details">
-                            <h3 class="mar-bottom-10"><a href="#">Padhai’s Alumni Hot Air Ballon Trip in Turkey</a></h3>
-                            <ul class="event-time">
-                                <li><i class="fa fa-clock-o"></i>11:00 AM - 3:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i>Royal National Park, Sydney</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <?php } ?>
 
-                    <div class="event-item">
-                        <div class="event-date text-center text-uppercase">
-                            <h4 class="mar-0">21 <span>Mar</span></h4>
-                        </div>
-                        <div class="event-details">
-                            <h3 class="mar-bottom-10"><a href="#">Fintech & Key Investment Conference</a></h3>
-                            <ul class="event-time">
-                                <li><i class="fa fa-clock-o"></i>11:00 AM - 3:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i>Royal National Park, Sydney</li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <a href="mt_btn_yellow.html">View All Events <i class="fa fa-long-arrow-right"></i></a>
+                    <a href="<?php
+
+                    if ($this->session->userdata("dil") == "az"){
+                        echo base_url('az/Events');
+                    }
+                    elseif ($this->session->userdata("dil") == "en"){
+                        echo base_url('en/Events');
+                    }
+                    elseif ($this->session->userdata("dil") == "ru"){
+                        echo base_url('ru/Events');
+                    }
+
+                    ?>"><?php echo $this->lang->line("butun_tedbirler"); ?>  <i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
         </div><!-- /.row -->
     </div><!-- /.container -->
 </section>
+
 <!--End Education Event-->
 
-<section id="mt_get_started" class="front-get">
-    <div class="container">
-        <div class="start-theme">
-            <div class="started-rg">
-                <div class="watch_content">
-                    <h2 class="white">GET STARTED TODAY</h2>
-                    <p class="white">Lorem ipsums dolors sit amet consectetur adipiselo elit sed do eiused tempor the incididunt ut labore et. Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt mauris. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit.</p>
-                    <a href="#" class="mt_btn_yellow">PURCAHSE THEME</a>
-                </div>
-            </div>
-            <div class="get_stt_img">
-                <img href="<?php echo base_url("public/front/")?>images/education/student-01.png" alt="">
-            </div>
-        </div>
-    </div>
-</section>
 
 <!--*Team*-->
 <section id="educate-team">
@@ -603,7 +589,7 @@
             <div class="col-md-4 col-sm-6 col-xs-12 item">
                 <div class="team_member">
                     <figure class="effect-julia">
-                        <img href="<?php echo base_url("public/front/")?>images/team/rmember-1.jpg" alt="team">
+                        <img src="<?php echo base_url("public/front/")?>images/team/rmember-1.jpg" alt="team">
                         <div class="team-overlay">
                             <div class="about-tech">
                                 <p>On the other hand we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms.</p>
@@ -757,190 +743,12 @@
 </section>
 <!--* EndTestimonial*-->
 
-<!--* Blog*-->
-<section id="mt_blog" class="light-bg">
-    <div class="container">
-        <div class="blog_post_sec blog_post_inner">
-            <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12 grid-item-a">
-                    <!-- section title -->
-                    <div class="inner-heading">
-                        <h3>Our Blog</h3>
-                        <h2>Follow our latest news</h2>
-                    </div>
-                    <div class="blog-post_wrapper front-wrapper">
-                        <div class="blog-post-image">
-                            <div class="clearfix">
-                                <div class="img detail-im">
-                                    <img src="<?php echo base_url("public/front/")?>images/blog-listing/blog_02.jpg" alt="image" class="img-responsive center-block post_img" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post-detail_container">
-                            <div class="post-content">
-                                <div class="post-date">
-                                    <p>August 2019</p>
-                                </div>
-                                <h3 class="post-title entry-title">
-                                    <a href="blog-details.html">Beginner Guideline of UI/UX</a>
-                                </h3>
-                                <p class="post-excerpt"> Sed ut perspiciatis unde omnis iste natus erro sit voluiptatem accusantium doloremque ips totam quae. </p>
-                                <div class="post_bottom">
-                                    <div class="bottom_list user_info_base">
-                                        <img src="<?php echo base_url("public/front/")?>images/blog/cmnt-2.jpg" alt="">
-                                        <p>John Wakson</p>
-                                    </div>
-                                    <div class="bottom_list user_post_cmt">
-                                        <a href="#"><i class="ion-ios-chatbubble-outline"></i>&nbsp;
-                                            Comments (5)</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 grid-item-b">
-                    <div class="blog-post_wrapper front-wrapper">
-                        <div class="blog-post-image">
-                            <div class="clearfix">
-                                <div class="img detail-im">
-                                    <img src="<?php echo base_url("public/front/")?>images/blog-listing/blog_04.jpg" alt="image" class="img-responsive center-block post_img" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post-detail_container">
-                            <div class="post-content">
-                                <div class="post-date">
-                                    <p>August 2019</p>
-                                </div>
-                                <h3 class="post-title entry-title">
-                                    <a href="blog-details.html">Beginner Guideline of UI/UX</a>
-                                </h3>
-                                <p class="post-excerpt"> Sed ut perspiciatis unde omnis iste natus erro sit voluiptatem accusantium doloremque ips totam quae. </p>
-                                <div class="post_bottom">
-                                    <div class="bottom_list user_info_base">
-                                        <img src="<?php echo base_url("public/front/")?>images/blog/cmnt-2.jpg" alt="">
-                                        <p>John Wakson</p>
-                                    </div>
-                                    <div class="bottom_list user_post_cmt">
-                                        <a href="#"><i class="ion-ios-chatbubble-outline"></i>&nbsp;
-                                            Comments (5)</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-post_wrapper front-wrapper bl_small_img">
-                        <div class="blog-post-image post-img-only">
-                            <div class="clearfix">
-                                <div class="img">
-                                    <img src="<?php echo base_url("public/front/")?>images/blog-listing/blog_03.jpg" alt="image" class="img-responsive center-block post_img" />
-                                    <div class="on-img-info">
-                                        <h3><a href="#">Our Students</a></h3>
-                                        <ul class="list-unstyled list-inline post-metadata">
-                                            <li>
-                                                <i class="ion-ios-stopwatch-outline"></i> 3rd March, 2018&nbsp;&nbsp;| </li>
-                                            <li>
-                                                <i class="ion-ios-chatbubble-outline"></i>&nbsp;
-                                                <a href="#">Comments(2)</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 grid-item-c">
-                    <div class="post-detail_container detail-single">
-                        <div class="post-content">
-                            <div class="post-date">
-                                <p>August 2019</p>
-                            </div>
-                            <h3 class="post-title entry-title">
-                                <a href="blog-details.html">Beginner Guideline of UI/UX</a>
-                            </h3>
-                            <p class="post-excerpt"> Sed ut perspiciatis unde omnis iste natus erro sit voluiptatem accusantium doloremque ips totam quae. </p>
-                            <div class="post_bottom">
-                                <div class="bottom_list user_info_base">
-                                    <img src="<?php echo base_url("public/front/")?>images/blog/cmnt-2.jpg" alt="">
-                                    <p>John Wakson</p>
-                                </div>
-                                <div class="bottom_list user_post_cmt">
-                                    <a href="#"><i class="ion-ios-chatbubble-outline"></i>&nbsp;
-                                        Comments (5)</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-post_wrapper front-wrapper blog_full_image">
-                        <div class="blog-post-image post-img-only">
-                            <div class="clearfix">
-                                <div class="img">
-                                    <img src="<?php echo base_url("public/front/")?>images/blog-listing/bl-01.jpg" alt="image" class="img-responsive center-block post_img" />
-                                    <div class="on-img-info">
-                                        <h3><a href="#">Course Registration</a></h3>
-                                        <ul class="list-unstyled list-inline post-metadata">
-                                            <li>
-                                                <i class="ion-ios-stopwatch-outline"></i> 22rd April, 2019&nbsp;&nbsp;| </li>
-                                            <li>
-                                                <i class="ion-ios-chatbubble-outline"></i>&nbsp;
-                                                <a href="#">Comments (10)</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--* End Blog*-->
 
-<!-- l-instructor -->
-<section id="l-instructor">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="widget-cta">
-                    <div class="item">
-                        <h2 class="widget-title">
-                            <span class="white">Become an Instructor</span>
-                        </h2>
-                        <div class="description">
-                            <p class="white">Teach what you love. Edumy gives you the tools to create an<br>online course.</p>
-                        </div>
-                    </div>
-                    <div class="action">
-                        <a class="mt_btn_yellow" href="#">Start Teaching</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-xs-12">
-                <div class="widget-cta cta-style1">
-                    <div class="item">
-                        <h2 class="widget-title">
-                            <span class="white">Dove School For Business</span>
-                        </h2>
-                        <div class="description">
-                            <p class="white">Get unlimited access to 2,500 of Udemy’s top courses for <br>
-                                your team. </p>
-                        </div>
-                    </div>
-                    <div class="action">
-                        <a class="mt_btn_white-bor" href="#">Start Teaching</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--End l-instructor -->
+
 
 <!-- Gallery -->
+<br>
+
 <section id="the-gallery" class="wide-gallery">
     <div class="container">
         <!-- section title -->

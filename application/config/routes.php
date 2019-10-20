@@ -165,6 +165,15 @@ $route["(:any)/Home"] = "HomeWebPageController/index/";
 $route["(:any)/About"] = "AboutWebPageController/index/";
 
 
+// Elaqe
+$route["(:any)/Contact"] = "ContactWebPageController/index/";
+
+
+// Tedbirler
+$route["(:any)/Events"] = "EventsWebPageController/index/";
+$route["(:any)/Events(.*)"] = "EventsWebPageController/index/$1";
+$route["(:any)/Event_single(.*)"] = "EventsWebPageController/single_page/$2/$1";
+
 
 
 
