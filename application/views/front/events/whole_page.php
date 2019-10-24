@@ -71,11 +71,11 @@
                             <?php
 
                             if ($this->session->userdata("dil") == "az"){
-                                echo strlen($event["desc_az"]) < 35 ? $event["name_az"]  : substr($event["desc_az"], 0,35).'...' ;
+                                echo strlen($event["desc_az"]) < 35 ? $event["desc_az"]  : substr($event["desc_az"], 0,35).'...' ;
                             }elseif ($this->session->userdata("dil") == "en"){
-                                echo strlen($event["desc_en"]) < 35 ? $event["name_en"]  : substr($event["desc_en"], 0,35).'...' ;
+                                echo strlen($event["desc_en"]) < 35 ? $event["desc_en"]  : substr($event["desc_en"], 0,35).'...' ;
                             }elseif ($this->session->userdata("dil") == "ru"){
-                                echo strlen($event["desc_ru"]) < 35 ? $event["name_ru"]  : substr($event["desc_ru"], 0,35).'...' ;
+                                echo strlen($event["desc_ru"]) < 35 ? $event["desc_ru"]  : substr($event["desc_ru"], 0,35).'...' ;
                             }
 
                             ?>

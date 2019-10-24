@@ -23,6 +23,8 @@
 
         $this->load->model("AboutModel");
         $this->load->model("EventModel");
+        $this->load->model("TeacherModel");
+        $this->load->model("CourseModel");
 
 
     }
@@ -31,6 +33,8 @@
     {
         $data['about']= $this->AboutModel->get_data();
         $data['events']= $this->EventModel->get_recent_data();
+        $data['teachers']= $this->TeacherModel->get_teachers_for_home();
+        $data['courses']= $this->CourseModel->get_courses_for_home();
 
 
         $this->load->view("$this->parent_folder/$this->sub_folder/whole_page",$data);

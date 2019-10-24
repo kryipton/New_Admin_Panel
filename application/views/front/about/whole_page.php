@@ -118,67 +118,6 @@
 <!--* End Mission Area*-->
 
 <!--* Testimonial*-->
-<section id="const-testi" class="edu-testimonial">
-    <div class="container wow slideInDown" data-wow-duration="2s">
-        <div class="row">
-            <div class="col-sm-6">
-                <!-- section title -->
-                <div class="inner-heading">
-                    <h3 class="white">Testimonials</h3>
-                    <h2 class="white">Hear what our students have to say</h2>
-                    <div class="testimonial-abt">
-                        <p class="white">Lorem ipsums dolors sit amet consectetur adipiselo elit sed do eiused tempor the incididunt ut labore et. Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="row slider-eductestimo">
-                    <div class="col-sm-4">
-                        <div class="item">
-                            <div class="testimonial_main">
-                                <div class="client-pic"><img src="<?php echo base_url("public/front/")?>images/team/member-1.jpg" alt=""></div>
-                                <h4>
-                                    <a href="#" class="text-uppercase">Christ Daniel</a>
-                                    <span>Biology</span>
-                                </h4>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="item">
-                            <div class="testimonial_main">
-                                <div class="client-pic"><img src="<?php echo base_url("public/front/")?>images/team/member-2.jpg" alt=""></div>
-                                <h4>
-                                    <a href="#" class="text-uppercase">John Wakson</a>
-                                    <span>Science & Arts</span>
-                                </h4>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="item">
-                            <div class="testimonial_main">
-                                <div class="client-pic"><img src="<?php echo base_url("public/front/")?>images/team/member-3.jpg" alt=""></div>
-                                <h4>
-                                    <a href="#" class="text-uppercase">Tim Loran</a>
-                                    <span>Web Developer</span>
-                                </h4>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!--* EndTestimonial*-->
 
 <!--* Fun And Facts*-->

@@ -3,7 +3,19 @@
     <div class="container">
 
         <div class="logo pull-left">
-            <h2><a href="index-2.html"><!-- <img  class="logo-img" href="<?php echo base_url("public/front/")?>images/w-logo.png" alt=""> -->Padhai</a></h2>
+            <h2><a href="<?php
+
+                if ($this->session->userdata("dil") == "az"){
+                    echo base_url('az/Home');
+                }
+                elseif ($this->session->userdata("dil") == "en"){
+                    echo base_url('en/Home');
+                }
+                elseif ($this->session->userdata("dil") == "ru"){
+                    echo base_url('ru/Home');
+                }
+
+                ?>"><!-- <img  class="logo-img" href="<?php echo base_url("public/front/")?>images/w-logo.png" alt=""> -->Padhai</a></h2>
         </div>
 
         <div id="navbar" class="navbar-nav-wrapper pull-right">
@@ -55,13 +67,24 @@
 
 
                 <!--Kursalar-->
-                <li>
-                    <a href="#"><?php echo $this->lang->line("kurslar"); ?> <i class="fa fa-angle-down"></i></a>
-                    <ul>
-                        <li><a href="courses.html">Courses Grid</a></li>
-                        <li><a href="courses-slider.html">Courses Slider</a></li>
-                        <li class="active"><a href="courses-detail.html">Courses Detail</a></li>
-                    </ul>
+                <li <?php if ($this->uri->segment(2)=="Courses") { ?>class="active" <?php } ?>>
+                    <a href="<?php
+
+                    if ($this->session->userdata("dil") == "az"){
+                        echo base_url('az/Courses');
+                    }
+                    elseif ($this->session->userdata("dil") == "en"){
+                        echo base_url('en/Courses');
+                    }
+                    elseif ($this->session->userdata("dil") == "ru"){
+                        echo base_url('ru/Courses');
+                    }
+
+                    ?>">
+                    <?php echo $this->lang->line("kurslar"); ?>
+
+                    </a>
+
                 </li>
                 <!--Kursalar-->
 
@@ -69,8 +92,22 @@
 
 
                 <!--Muelllimler-->
-                <li>
-                    <a href="#"><?php echo $this->lang->line("muellimler"); ?> <i class="fa fa-angle-down"></i></a>
+                <li <?php if ($this->uri->segment(2)=="Teachers") { ?>class="active" <?php } ?>>
+                    <a href="<?php
+
+                    if ($this->session->userdata("dil") == "az"){
+                        echo base_url('az/Teachers');
+                    }
+                    elseif ($this->session->userdata("dil") == "en"){
+                        echo base_url('en/Teachers');
+                    }
+                    elseif ($this->session->userdata("dil") == "ru"){
+                        echo base_url('ru/Teachers');
+                    }
+
+                    ?>">
+                        <?php echo $this->lang->line("muellimler"); ?>
+                    </a>
                 </li>
                 <!--Muelllimler-->
 

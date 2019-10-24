@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Padhai is a creative education html template">
 
-    <title>Padhai - Education HTML Template</title>
+    <title>Course</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url("public/front/")?>images/favicon.png">
 
